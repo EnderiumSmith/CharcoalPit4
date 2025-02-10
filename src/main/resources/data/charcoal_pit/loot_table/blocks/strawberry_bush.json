@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "charcoal_pit:strawberry",
+          "functions": [],
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "charcoal_pit:strawberry_bush",
+              "properties": {
+                "age": "3"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "items": "minecraft:shears"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "charcoal_pit:strawberry_bush"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "charcoal_pit:blocks/strawberry_bush"
+}

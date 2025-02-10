@@ -1,0 +1,58 @@
+{
+  "parent": "charcoal_pit:charcoal_pit/copper",
+  "display": {
+    "icon": {
+      "id": "charcoal_pit:bellows"
+    },
+    "title": {
+      "translate": "advancements.charcoal_pit.bloomery.title"
+    },
+    "description": {
+      "translate": "advancements.charcoal_pit.bloomery.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "item1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:bloomery_brick"
+          }
+        ]
+      }
+    },
+    "item3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:bloomery_sandy"
+          }
+        ]
+      }
+    },
+    "item2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:bellows"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item1","item3"
+    ],
+    [ 
+      "item2" 
+    ]
+  ]
+}

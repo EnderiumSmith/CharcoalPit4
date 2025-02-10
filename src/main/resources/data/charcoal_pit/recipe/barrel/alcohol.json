@@ -1,0 +1,15 @@
+{
+  "type": "charcoal_pit:barrel",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "item_in": {
+    "tag": "charcoal_pit:alcohol_items"
+  },
+  "item_amount": 4,
+  "fluid_out": {
+    "fluid": "charcoal_pit:alcohol"
+  },
+  "void_fluid": true,
+  "process_time": 48000
+}

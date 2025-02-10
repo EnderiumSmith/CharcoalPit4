@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "charcoal_pit:ingot_tin"
+    },
+    {
+      "item": "charcoal_pit:ingot_tin"
+    },
+    {
+      "item": "charcoal_pit:ingot_tin"
+    },
+    {
+      "item": "charcoal_pit:ingot_tin"
+    },
+    {
+      "item": "charcoal_pit:ingot_tin"
+    },
+    {
+      "item": "charcoal_pit:ingot_tin"
+    },
+    {
+      "item": "charcoal_pit:ingot_tin"
+    },
+    {
+      "item": "charcoal_pit:ingot_tin"
+    },
+    {
+      "item": "charcoal_pit:ingot_tin"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:tin_block"
+  }
+}

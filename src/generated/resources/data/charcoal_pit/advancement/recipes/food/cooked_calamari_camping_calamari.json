@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_calamari": {
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:calamari"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "charcoal_pit:cooked_calamari_camping_calamari"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_calamari"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "charcoal_pit:cooked_calamari_camping_calamari"
+    ]
+  }
+}

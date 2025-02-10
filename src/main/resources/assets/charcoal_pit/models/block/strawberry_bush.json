@@ -1,0 +1,6 @@
+{
+  "parent": "charcoal_pit:block/bush",
+  "textures": {
+    "fan": "charcoal_pit:block/strawberry_bush"
+  }
+}

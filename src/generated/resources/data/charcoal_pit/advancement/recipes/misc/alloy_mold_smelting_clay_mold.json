@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_clay_mold": {
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:clay_mold"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "charcoal_pit:alloy_mold_smelting_clay_mold"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_clay_mold"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "charcoal_pit:alloy_mold_smelting_clay_mold"
+    ]
+  }
+}

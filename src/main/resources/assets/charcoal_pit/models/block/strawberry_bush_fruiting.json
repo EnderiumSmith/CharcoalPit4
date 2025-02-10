@@ -1,0 +1,7 @@
+{
+  "parent": "charcoal_pit:block/bush_layer",
+  "textures": {
+    "fan": "charcoal_pit:block/strawberry_bush",
+    "fruit": "charcoal_pit:block/strawberry_fruit"
+  }
+}

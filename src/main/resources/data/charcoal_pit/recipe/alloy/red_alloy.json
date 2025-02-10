@@ -1,0 +1,28 @@
+{
+  "type": "charcoal_pit:alloy_mold",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:ingots/tin"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "charcoal_pit:alloy_mold"
+    }
+  ],
+  "result": {
+    "item": "charcoal_pit:alloy_red"
+  },
+  "count": 1
+}

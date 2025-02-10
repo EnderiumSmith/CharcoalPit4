@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "charcoal_pit:block/strawberry_bush"
+    },
+    "age=1": {
+      "model": "charcoal_pit:block/strawberry_bush"
+    },
+    "age=2": {
+      "model": "charcoal_pit:block/strawberry_bush_flowering"
+    },
+    "age=3": {
+      "model": "charcoal_pit:block/strawberry_bush_fruiting"
+    }
+  }
+}

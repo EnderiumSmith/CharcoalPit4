@@ -1,0 +1,15 @@
+{
+  "loader": "neoforge:item_layers",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "charcoal_pit:item/amaranth_sapling",
+    "layer1": "charcoal_pit:item/amaranth_sapling_glow"
+  },
+  "neoforge_data": {
+  	"layers":{
+		"1": {
+		    "block_light": 15
+		}
+        }
+    }
+}

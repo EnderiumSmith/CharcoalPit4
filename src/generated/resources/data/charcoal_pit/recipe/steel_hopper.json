@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "C": {
+      "tag": "c:chests"
+    },
+    "I": {
+      "tag": "c:ingots/steel"
+    }
+  },
+  "pattern": [
+    "I I",
+    "ICI",
+    " I "
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:hopper"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "group": "calamari",
+  "ingredient": {
+    "item": "charcoal_pit:calamari"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:cooked_calamari"
+  }
+}

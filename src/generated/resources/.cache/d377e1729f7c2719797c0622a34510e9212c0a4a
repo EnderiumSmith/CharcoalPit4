@@ -1,0 +1,18 @@
+// 1.21.1	2025-01-22T18:18:00.951787482	Tags for minecraft:block mod id charcoal_pit
+bb4186a3e465b9f0dc55195ffc40227269df8852 data/c/tags/block/ores.json
+cd07e21c8b2b2bff662121109f93dc58a44f7e15 data/c/tags/block/ores/tin.json
+2edc1e0134cafc620eac4b33fe3f16e4fe12719d data/c/tags/block/storage_blocks/bronze.json
+5c7d587d8f7a5dd496caddecb39bf9129ee45bbe data/c/tags/block/storage_blocks/charcoal.json
+786339f15bbb928a51fcf3b0b9adc2a7ec76be14 data/c/tags/block/storage_blocks/coke.json
+db177b4a9050521239a6e6247b6ca2de748dacd2 data/c/tags/block/storage_blocks/steel.json
+17976e926f11a6fc4b1f1ad2c2f5ab5f6975fbe0 data/c/tags/block/storage_blocks/tin.json
+be6c7115c0b93681fb681b6e69f5c331c59ba89e data/charcoal_pit/tags/block/refractory_blocks.json
+69b35e76afaf852b8170d181ea80554f5548b875 data/minecraft/tags/block/beacon_base_blocks.json
+31f6dc82244dcb428c5ac9b6abb995c11ed3cec4 data/minecraft/tags/block/crops.json
+69b35e76afaf852b8170d181ea80554f5548b875 data/minecraft/tags/block/incorrect_for_stone_tool.json
+5aac5bc759710af135dab80ec4abefc50b4672bb data/minecraft/tags/block/incorrect_for_wooden_tool.json
+54f040f747f6eec76c3a2acc02e01adc84e44339 data/minecraft/tags/block/leaves.json
+c19c0c1e5af7c8e417eb0e4942702af109c8ffb8 data/minecraft/tags/block/mineable/axe.json
+aec0be1cea79bcb9d604988565bd2a62b53982e4 data/minecraft/tags/block/mineable/pickaxe.json
+1d716ba9ba2d34155f0e70cb6049fcbc731a4305 data/minecraft/tags/block/mineable/shovel.json
+287b06bf22664a7eae55bec3d8db50506a801da5 data/minecraft/tags/block/walls.json

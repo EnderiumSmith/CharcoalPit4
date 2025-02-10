@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,powered=false": {
+      "model": "charcoal_pit:block/bellows"
+    },
+    "facing=south,powered=false": {
+      "model": "charcoal_pit:block/bellows",
+      "y": 180
+    },
+    "facing=east,powered=false": {
+      "model": "charcoal_pit:block/bellows",
+      "y": 90
+    },
+    "facing=west,powered=false": {
+      "model": "charcoal_pit:block/bellows",
+      "y": 270
+    },
+    "facing=north,powered=true": {
+      "model": "charcoal_pit:block/bellows_push"
+    },
+    "facing=south,powered=true": {
+      "model": "charcoal_pit:block/bellows_push",
+      "y": 180
+    },
+    "facing=east,powered=true": {
+      "model": "charcoal_pit:block/bellows_push",
+      "y": 90
+    },
+    "facing=west,powered=true": {
+      "model": "charcoal_pit:block/bellows_push",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "charcoal_pit:walnut_sapling",
+          "weight": 25,
+          "quality": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air",
+          "weight": 75
+        }
+      ]
+    }
+  ]
+}

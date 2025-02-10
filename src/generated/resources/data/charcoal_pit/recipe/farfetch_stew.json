@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "charcoal_pit:leek"
+    },
+    {
+      "item": "minecraft:cooked_chicken"
+    },
+    {
+      "item": "charcoal_pit:leek"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:farfetch_stew"
+  }
+}

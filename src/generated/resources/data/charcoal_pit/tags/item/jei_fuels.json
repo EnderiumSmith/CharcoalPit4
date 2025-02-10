@@ -1,0 +1,13 @@
+{
+  "values": [
+    "minecraft:oak_log",
+    "minecraft:charcoal",
+    "charcoal_pit:charcoal_block",
+    "minecraft:coal",
+    "minecraft:coal_block",
+    "charcoal_pit:coke",
+    "charcoal_pit:coke_block",
+    "minecraft:blaze_rod",
+    "charcoal_pit:aeternalis_fuel"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "C": {
+      "item": "minecraft:hopper"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "I": {
+      "tag": "c:ingots/bronze"
+    }
+  },
+  "pattern": [
+    "III",
+    "ICI",
+    "IFI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:press"
+  }
+}

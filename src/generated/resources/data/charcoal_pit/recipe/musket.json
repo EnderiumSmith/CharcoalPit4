@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "I": {
+      "tag": "c:ingots/steel"
+    },
+    "K": {
+      "item": "charcoal_pit:steel_knife"
+    },
+    "W": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "I  ",
+    "KIF",
+    " WI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:musket"
+  }
+}

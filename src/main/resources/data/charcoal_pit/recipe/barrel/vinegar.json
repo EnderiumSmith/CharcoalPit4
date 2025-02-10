@@ -1,0 +1,17 @@
+{
+  "type": "charcoal_pit:barrel",
+  "fluid_in": {
+    "fluid": "charcoal_pit:alcohol"
+  },
+  "item_in": {
+    "item": "minecraft:glow_lichen"
+  },
+  "fluid_out": {
+    "fluid": "charcoal_pit:vinegar"
+  },
+  "item_out": {
+    "count": 2,
+    "id": "minecraft:glow_lichen"
+  },
+  "process_time": 24000
+}

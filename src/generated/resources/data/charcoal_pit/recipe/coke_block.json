@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "charcoal_pit:coke"
+    },
+    {
+      "item": "charcoal_pit:coke"
+    },
+    {
+      "item": "charcoal_pit:coke"
+    },
+    {
+      "item": "charcoal_pit:coke"
+    },
+    {
+      "item": "charcoal_pit:coke"
+    },
+    {
+      "item": "charcoal_pit:coke"
+    },
+    {
+      "item": "charcoal_pit:coke"
+    },
+    {
+      "item": "charcoal_pit:coke"
+    },
+    {
+      "item": "charcoal_pit:coke"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:coke_block"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "quicklime",
+  "ingredient": {
+    "item": "charcoal_pit:flux"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:quicklime"
+  }
+}

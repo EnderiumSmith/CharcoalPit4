@@ -1,0 +1,11 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "charcoal_pit:alcohol"
+  },
+  "fluid_out": {
+    "fluid": "charcoal_pit:ethanol"
+  },
+  "amount_out": 125,
+  "process_time": 200
+}

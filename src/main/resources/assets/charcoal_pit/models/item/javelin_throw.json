@@ -1,0 +1,12 @@
+{
+    "loader": "neoforge:separate_transforms",
+    "parent": "minecraft:item/generated",
+    "base": {
+        "parent": "charcoal_pit:item/javelin_throwing"
+    },
+    "perspectives": {
+        "gui": {
+            "parent": "charcoal_pit:item/javelin_item"
+        }
+    }
+}

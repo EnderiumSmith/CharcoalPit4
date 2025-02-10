@@ -1,0 +1,12 @@
+{
+  "type": "charcoal_pit:quern",
+  "category": "misc",
+  "group": "quern",
+  "ingredient": {
+    "tag": "charcoal_pit:calcareous_rocks"
+  },
+  "result": {
+    "count": 4,
+    "id": "charcoal_pit:flux"
+  }
+}

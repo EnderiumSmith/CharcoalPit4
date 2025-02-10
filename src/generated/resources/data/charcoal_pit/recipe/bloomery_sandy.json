@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "B": {
+      "item": "charcoal_pit:sandy_bricks"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "pattern": [
+    " B ",
+    "B B",
+    "BFB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:bloomery_sandy"
+  }
+}

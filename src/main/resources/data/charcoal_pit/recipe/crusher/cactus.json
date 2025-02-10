@@ -1,0 +1,10 @@
+{
+  "type": "charcoal_pit:shatter",
+  "item_in": {
+    "item": "minecraft:cactus"
+  },
+  "fluid_out": {
+    "fluid": "minecraft:water"
+  },
+  "amount_out": 250
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "I": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "II ",
+    "IBI",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:jerry_can"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "axis=x,lit=false": {
+      "model": "charcoal_pit:block/the_vat",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,lit=false": {
+      "model": "charcoal_pit:block/the_vat"
+    },
+    "axis=z,lit=false": {
+      "model": "charcoal_pit:block/the_vat",
+      "x": 90
+    },
+    "axis=x,lit=true": {
+      "model": "charcoal_pit:block/the_vat_on",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,lit=true": {
+      "model": "charcoal_pit:block/the_vat_on"
+    },
+    "axis=z,lit=true": {
+      "model": "charcoal_pit:block/the_vat_on",
+      "x": 90
+    }
+  }
+}

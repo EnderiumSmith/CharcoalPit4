@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.3,
+  "group": "sandy_bricks",
+  "ingredient": {
+    "item": "charcoal_pit:unfired_sandy_brick"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:sandy_brick"
+  }
+}

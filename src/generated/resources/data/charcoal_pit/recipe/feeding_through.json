@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "H": {
+      "item": "minecraft:hay_block"
+    },
+    "S": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "pattern": [
+    "SHS",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:feeding_through"
+  }
+}

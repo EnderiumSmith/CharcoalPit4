@@ -1,0 +1,11 @@
+{
+  "type": "charcoal_pit:shatter",
+  "item_in": {
+    "tag": "c:seeds"
+  },
+  "fluid_out": {
+    "fluid": "charcoal_pit:seed_oil"
+  },
+  "amount_out": 10,
+  "process_time": 100
+}

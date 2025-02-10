@@ -1,0 +1,7 @@
+{
+  "parent": "charcoal_pit:block/bellows",
+  "textures": {
+    "bellow_front": "charcoal_pit:block/mechanical_bellow_front",
+    "bellow_back": "minecraft:block/blast_furnace_top"
+  }
+}

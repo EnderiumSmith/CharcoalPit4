@@ -1,0 +1,7 @@
+{
+  "parent": "charcoal_pit:block/bloomery_chimney",
+  "textures": {
+    "side": "minecraft:block/bricks",
+    "top": "charcoal_pit:block/bloomery_top"
+  }
+}

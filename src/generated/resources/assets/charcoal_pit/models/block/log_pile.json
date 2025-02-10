@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "charcoal_pit:block/log_pile_top",
+    "side": "charcoal_pit:block/log_pile"
+  }
+}

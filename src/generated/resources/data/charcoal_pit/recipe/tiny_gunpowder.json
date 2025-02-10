@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:gunpowder"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "charcoal_pit:tiny_gunpowder"
+  }
+}

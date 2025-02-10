@@ -1,0 +1,72 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "weight": 1,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget",
+          "weight": 25,
+          "quality": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 6
+              }
+            },
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "charcoal_pit:raw_tin_nugget",
+          "weight": 174,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            },
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gravel",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:flint",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}
+

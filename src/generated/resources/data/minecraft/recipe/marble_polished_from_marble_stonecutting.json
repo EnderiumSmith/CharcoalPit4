@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "charcoal_pit:marble"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:marble_polished"
+  }
+}

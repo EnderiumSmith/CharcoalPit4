@@ -1,0 +1,12 @@
+{
+  "type": "charcoal_pit:quern",
+  "category": "misc",
+  "group": "quern",
+  "ingredient": {
+    "item": "minecraft:breeze_rod"
+  },
+  "result": {
+    "count": 6,
+    "id": "minecraft:wind_charge"
+  }
+}

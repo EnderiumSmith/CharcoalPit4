@@ -1,0 +1,62 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cube_all",
+	"elements": [
+		{
+			"name": "base",
+			"from": [0, 0, 0],
+			"to": [16, 4, 16],
+			"color": 3,
+			"faces": {
+				"north": {"texture": "#base"},
+				"east": {"texture": "#base"},
+				"south": {"texture": "#base"},
+				"west": {"texture": "#base"},
+				"up": {"texture": "#side"},
+				"down": {"texture": "#side"}
+			}
+		},
+		{
+			"name": "piston",
+			"from": [0, 8, 0],
+			"to": [16, 12, 16],
+			"color": 2,
+			"faces": {
+				"north": {"texture": "#base"},
+				"east": {"texture": "#base"},
+				"south": {"texture": "#base"},
+				"west": {"texture": "#base"},
+				"up": {"texture": "#side"},
+				"down": {"texture": "#side"}
+			}
+		},
+		{
+			"name": "coil",
+			"from": [4, 8, 4],
+			"to": [12, 16, 12],
+			"color": 4,
+			"faces": {
+				"north": {"uv": [4, 8, 12, 16], "texture": "#coil"},
+				"east": {"uv": [4, 8, 12, 16], "texture": "#coil"},
+				"south": {"uv": [4, 8, 12, 16], "texture": "#coil"},
+				"west": {"uv": [4, 8, 12, 16], "texture": "#coil"},
+				"up": {"uv": [4, 0, 12, 8], "texture": "#coil"},
+				"down": {"uv": [4, 0, 12, 8], "texture": "#coil"}
+			}
+		},
+		{
+			"name": "bellow",
+			"from": [2, 4, 2],
+			"to": [14, 8, 14],
+			"color": 3,
+			"faces": {
+				"north": {"texture": "#bellow"},
+				"east": {"texture": "#bellow"},
+				"south": {"texture": "#bellow"},
+				"west": {"texture": "#bellow"},
+				"up": {"texture": "#bellow"},
+				"down": {"texture": "#bellow"}
+			}
+		}
+	]
+}

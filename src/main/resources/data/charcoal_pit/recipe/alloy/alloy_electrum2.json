@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/silver"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/electrum"
+      }
+    }
+  ],
+  "type": "charcoal_pit:alloy_mold",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "tag": "c:ingots/silver"
+    },
+    {
+      "tag": "c:ingots/silver"
+    },
+    {
+      "item": "charcoal_pit:alloy_mold"
+    }
+  ],
+  "result": {
+    "tag": "c:ingots/electrum"
+  },
+  "count": 4
+}

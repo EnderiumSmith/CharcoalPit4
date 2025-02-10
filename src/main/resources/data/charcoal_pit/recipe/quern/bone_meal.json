@@ -1,0 +1,12 @@
+{
+  "type": "charcoal_pit:quern",
+  "category": "misc",
+  "group": "quern",
+  "ingredient": {
+    "item": "minecraft:bone"
+  },
+  "result": {
+    "count": 5,
+    "id": "minecraft:bone_meal"
+  }
+}

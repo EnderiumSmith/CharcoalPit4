@@ -1,0 +1,13 @@
+{
+  "type": "charcoal_pit:blooming",
+  "temperature": 1218,
+  "cooking_time": 200,
+  "experience": 0.7,
+  "ingredient": {
+    "tag": "c:raw_materials/iron"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:iron_ingot"
+  }
+}

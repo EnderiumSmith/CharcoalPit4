@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "clay_mold",
+  "ingredient": {
+    "item": "charcoal_pit:clay_mold"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:alloy_mold"
+  }
+}

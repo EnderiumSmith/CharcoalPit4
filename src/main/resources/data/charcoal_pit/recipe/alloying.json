@@ -1,0 +1,14 @@
+{
+  "type": "charcoal_pit:alloying",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 0.35,
+  "group": "clay_mold",
+  "ingredient": {
+    "item": "charcoal_pit:alloy_mold_full"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:alloy_mold_finished"
+  }
+}

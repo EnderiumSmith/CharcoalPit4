@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "fire_brick",
+  "ingredient": {
+    "item": "charcoal_pit:unfired_high_refractory_brick"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:high_refractory_brick"
+  }
+}

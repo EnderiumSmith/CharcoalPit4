@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:raw_iron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "charcoal_pit:ore_and_flint"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      ""
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "charcoal_pit:ore_and_flint"
+    ]
+  }
+}

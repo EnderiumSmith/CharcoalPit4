@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "charcoal_pit:marble_polished"
+    }
+  },
+  "pattern": [
+    "S",
+    "S"
+  ],
+  "result": {
+    "count": 2,
+    "id": "charcoal_pit:marble_pillar"
+  }
+}

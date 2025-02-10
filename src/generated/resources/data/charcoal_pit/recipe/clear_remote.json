@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "charcoal_pit:dynamite_remote"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:dynamite_remote"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "charcoal_pit:quern",
+  "category": "misc",
+  "group": "quern",
+  "ingredient": {
+    "tag": "c:ores/redstone"
+  },
+  "result": {
+    "count": 5,
+    "id": "minecraft:redstone"
+  }
+}

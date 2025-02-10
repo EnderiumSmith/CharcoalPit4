@@ -1,0 +1,15 @@
+{
+  "type": "charcoal_pit:barrel",
+  "fluid_in": {
+    "fluid": "minecraft:milk"
+  },
+  "amount_in": 16000,
+  "item_in": {
+    "item": "charcoal_pit:vinegar_bucket"
+  },
+  "item_out": {
+    "count": 16,
+    "id": "charcoal_pit:cheese"
+  },
+  "process_time": 24000
+}

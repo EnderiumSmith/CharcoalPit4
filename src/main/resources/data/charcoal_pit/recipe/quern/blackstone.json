@@ -1,0 +1,12 @@
+{
+  "type": "charcoal_pit:quern",
+  "category": "misc",
+  "group": "quern",
+  "ingredient": {
+    "item": "minecraft:gilded_blackstone"
+  },
+  "result": {
+    "count": 4,
+    "id": "minecraft:gold_nugget"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/silver"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/hepatizon"
+      }
+    }
+  ],
+  "type": "charcoal_pit:alloy_mold",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "tag": "c:ingots/silver"
+    },
+    {
+      "item": "charcoal_pit:alloy_mold"
+    }
+  ],
+  "result": {
+    "tag": "c:ingots/hepatizon"
+  },
+  "count": 4
+}

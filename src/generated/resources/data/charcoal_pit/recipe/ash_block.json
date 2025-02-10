@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "charcoal_pit:ash"
+    },
+    {
+      "item": "charcoal_pit:ash"
+    },
+    {
+      "item": "charcoal_pit:ash"
+    },
+    {
+      "item": "charcoal_pit:ash"
+    },
+    {
+      "item": "charcoal_pit:ash"
+    },
+    {
+      "item": "charcoal_pit:ash"
+    },
+    {
+      "item": "charcoal_pit:ash"
+    },
+    {
+      "item": "charcoal_pit:ash"
+    },
+    {
+      "item": "charcoal_pit:ash"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:ash_block"
+  }
+}

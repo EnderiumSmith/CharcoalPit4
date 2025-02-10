@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "tag": "c:ingots/steel"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "I",
+    "I",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:steel_sword"
+  }
+}

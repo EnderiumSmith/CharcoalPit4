@@ -1,0 +1,6 @@
+{
+  "parent": "charcoal_pit:block/sunflower_bottom",
+  "textures": {
+    "cross": "charcoal_pit:block/sunflower_crop1"
+  }
+}

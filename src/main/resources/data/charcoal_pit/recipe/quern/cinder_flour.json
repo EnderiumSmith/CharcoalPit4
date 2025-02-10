@@ -1,0 +1,12 @@
+{
+  "type": "charcoal_pit:quern",
+  "category": "misc",
+  "group": "quern",
+  "ingredient": {
+    "item": "minecraft:netherrack"
+  },
+  "result": {
+    "count": 4,
+    "id": "charcoal_pit:cinder_flour"
+  }
+}

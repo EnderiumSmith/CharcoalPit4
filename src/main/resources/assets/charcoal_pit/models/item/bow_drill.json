@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "charcoal_pit:item/bow_drill"
+  }
+}

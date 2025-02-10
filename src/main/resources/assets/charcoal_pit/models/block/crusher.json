@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "charcoal_pit:block/crusher_top",
+    "bottom": "charcoal_pit:block/crusher_bottom",
+    "front": "charcoal_pit:block/crusher_front",
+    "side": "charcoal_pit:block/crusher_side"
+  }
+}

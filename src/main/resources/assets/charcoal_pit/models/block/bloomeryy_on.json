@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "charcoal_pit:block/bloomery_top_on",
+    "bottom": "minecraft:block/bricks",
+    "front": "charcoal_pit:block/bloomery_front_on",
+    "side": "charcoal_pit:block/bloomery_side"
+  }
+}

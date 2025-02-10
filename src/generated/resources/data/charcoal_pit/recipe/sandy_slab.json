@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "charcoal_pit:sandy_bricks"
+    }
+  },
+  "pattern": [
+    "BBB"
+  ],
+  "result": {
+    "count": 6,
+    "id": "charcoal_pit:sandy_slab"
+  }
+}

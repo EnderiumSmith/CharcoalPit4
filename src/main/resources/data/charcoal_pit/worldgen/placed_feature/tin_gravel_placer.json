@@ -1,0 +1,24 @@
+{
+  "feature": "charcoal_pit:disk_gravel_tin",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_fluids",
+        "fluids": "minecraft:water"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
+

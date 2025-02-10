@@ -1,0 +1,16 @@
+{
+  "type": "charcoal_pit:barrel",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "amount_in": 250,
+  "item_in": {
+    "item": "charcoal_pit:quicklime"
+  },
+  "fluid_out": {
+    "fluid": "charcoal_pit:limewater"
+  },
+  "amount_out": 250,
+  "void_fluid": true,
+  "process_time": 1000
+}

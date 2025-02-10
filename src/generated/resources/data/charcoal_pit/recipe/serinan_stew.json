@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bamboo"
+    },
+    {
+      "item": "minecraft:cooked_chicken"
+    },
+    {
+      "item": "minecraft:tropical_fish"
+    },
+    {
+      "tag": "c:crops/sunflower"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:serinan_stew"
+  }
+}

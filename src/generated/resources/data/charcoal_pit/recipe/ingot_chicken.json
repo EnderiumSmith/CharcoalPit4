@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "charcoal_pit:nugget_chicken"
+    },
+    {
+      "item": "charcoal_pit:nugget_chicken"
+    },
+    {
+      "item": "charcoal_pit:nugget_chicken"
+    },
+    {
+      "item": "charcoal_pit:nugget_chicken"
+    },
+    {
+      "item": "charcoal_pit:nugget_chicken"
+    },
+    {
+      "item": "charcoal_pit:nugget_chicken"
+    },
+    {
+      "item": "charcoal_pit:nugget_chicken"
+    },
+    {
+      "item": "charcoal_pit:nugget_chicken"
+    },
+    {
+      "item": "charcoal_pit:nugget_chicken"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:ingot_chicken"
+  }
+}

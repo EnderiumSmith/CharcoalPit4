@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "minecraft:forest",
+  "features": "charcoal_pit:patch_strawberry_common",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "charcoal_pit:marble_bricks"
+    }
+  },
+  "pattern": [
+    "  S",
+    " SS",
+    "SSS"
+  ],
+  "result": {
+    "count": 4,
+    "id": "charcoal_pit:marble_stairs"
+  }
+}

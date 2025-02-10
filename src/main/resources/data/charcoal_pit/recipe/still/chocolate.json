@@ -1,0 +1,15 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "minecraft:milk"
+  },
+  "amount_in": 250,
+  "item_in": {
+    "item": "charcoal_pit:chocolate_powder"
+  },
+  "item_out": {
+    "count": 1,
+    "id": "charcoal_pit:chocolate_bar"
+  },
+  "process_time": 100
+}

@@ -1,0 +1,51 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"0": "charcoal_pit:block/quern_side",
+		"1": "charcoal_pit:block/quern_top",
+		"2": "minecraft:block/smooth_stone",
+		"particle": "charcoal_pit:block/quern_side"
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [0, 0, 0],
+			"to": [16, 7, 16],
+			"faces": {
+				"north": {"uv": [0, 9, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 9, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 9, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 9, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+			}
+		},
+		{
+			"name": "stone",
+			"from": [2, 7, 2],
+			"to": [14, 13, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 7, 2]},
+			"faces": {
+				"north": {"uv": [2, 3, 14, 9], "texture": "#0"},
+				"east": {"uv": [2, 3, 14, 9], "texture": "#0"},
+				"south": {"uv": [2, 3, 14, 9], "texture": "#0"},
+				"west": {"uv": [2, 3, 14, 9], "texture": "#0"},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#1"}
+			}
+		},
+		{
+			"name": "handle1",
+			"from": [11, 13, 4],
+			"to": [12, 16, 5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 13, 4]},
+			"faces": {
+				"north": {"uv": [4, 0, 5, 3], "texture": "#0"},
+				"east": {"uv": [4, 0, 5, 3], "texture": "#0"},
+				"south": {"uv": [5, 0, 4, 3], "texture": "#0"},
+				"west": {"uv": [4, 0, 5, 3], "texture": "#0"},
+				"up": {"uv": [4, 0, 5, 1], "texture": "#0"}
+			}
+		}
+	]
+}

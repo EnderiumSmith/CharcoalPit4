@@ -1,0 +1,10 @@
+{
+  "parent": "charcoal_pit:block/engine_item",
+  "textures": {
+    "base": "charcoal_pit:block/steel_block",
+    "side": "charcoal_pit:block/steel_frame",
+    "coil": "charcoal_pit:block/engine_coil",
+    "bellow": "charcoal_pit:block/bellow_middle",
+    "particle": "charcoal_pit:block/steel_block"
+  }
+}

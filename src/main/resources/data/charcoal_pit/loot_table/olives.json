@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "charcoal_pit:olive_sapling",
+          "weight": 25,
+          "quality": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air",
+          "weight": 75
+        }
+      ]
+    }
+  ]
+}

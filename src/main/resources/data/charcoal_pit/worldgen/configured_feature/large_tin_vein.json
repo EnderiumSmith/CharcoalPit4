@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 64,
+    "discard_chance_on_air_exposure": 0,
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "minecraft:stone",
+          "probability": 0.4
+        },
+        "state": {
+          "Name": "minecraft:andesite"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "minecraft:stone",
+          "probability": 0.18
+        },
+        "state": {
+          "Name": "charcoal_pit:ore_tin"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "minecraft:stone",
+          "probability": 0.02
+        },
+        "state": {
+          "Name": "minecraft:gold_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:random_block_match",
+          "block": "minecraft:gravel",
+          "probability": 0.6
+        },
+        "state": {
+          "Name": "charcoal_pit:gravel_tin"
+        }
+      }
+    ]
+  }
+}
+

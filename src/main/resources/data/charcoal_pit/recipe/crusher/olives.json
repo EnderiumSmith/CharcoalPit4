@@ -1,0 +1,10 @@
+{
+  "type": "charcoal_pit:shatter",
+  "item_in": {
+    "item": "charcoal_pit:olives"
+  },
+  "fluid_out": {
+    "fluid": "charcoal_pit:seed_oil"
+  },
+  "amount_out": 100
+}

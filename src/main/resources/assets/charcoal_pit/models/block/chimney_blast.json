@@ -1,0 +1,7 @@
+{
+  "parent": "charcoal_pit:block/bloomery_chimney",
+  "textures": {
+    "side": "charcoal_pit:block/high_refractory_bricks",
+    "top": "charcoal_pit:block/blast_furnace_top"
+  }
+}

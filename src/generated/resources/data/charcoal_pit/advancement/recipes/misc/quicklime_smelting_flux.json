@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_flux": {
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:flux"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "charcoal_pit:quicklime_smelting_flux"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_flux"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "charcoal_pit:quicklime_smelting_flux"
+    ]
+  }
+}

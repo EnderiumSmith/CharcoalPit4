@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "charcoal_pit:alloy_steel"
+    },
+    {
+      "item": "charcoal_pit:alloy_steel"
+    },
+    {
+      "item": "charcoal_pit:alloy_steel"
+    },
+    {
+      "item": "charcoal_pit:alloy_steel"
+    },
+    {
+      "item": "charcoal_pit:alloy_steel"
+    },
+    {
+      "item": "charcoal_pit:alloy_steel"
+    },
+    {
+      "item": "charcoal_pit:alloy_steel"
+    },
+    {
+      "item": "charcoal_pit:alloy_steel"
+    },
+    {
+      "item": "charcoal_pit:alloy_steel"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:steel_block"
+  }
+}

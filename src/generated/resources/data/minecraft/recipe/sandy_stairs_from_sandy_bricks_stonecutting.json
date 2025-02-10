@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "charcoal_pit:sandy_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:sandy_stairs"
+  }
+}

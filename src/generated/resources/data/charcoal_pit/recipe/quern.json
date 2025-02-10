@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "M": {
+      "item": "minecraft:smooth_stone"
+    },
+    "S": {
+      "tag": "c:stones"
+    }
+  },
+  "pattern": [
+    "I  ",
+    "SSS",
+    "MMM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:quern"
+  }
+}

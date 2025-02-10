@@ -1,0 +1,16 @@
+{
+  "type": "charcoal_pit:hot_blasting",
+  "temperature": 1964,
+  "cooking_time": 600,
+  "experience": 2,
+  "ingredient": {
+    "item": "minecraft:ancient_debris"
+  },
+  "flux": {
+    "item": "minecraft:soul_sand"
+  },
+  "result": {
+    "count": 2,
+    "id": "minecraft:netherite_scrap"
+  }
+}

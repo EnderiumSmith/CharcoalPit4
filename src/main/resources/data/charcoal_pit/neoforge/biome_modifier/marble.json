@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#c:is_overworld",
+  "features": "charcoal_pit:marble_placer",
+  "step": "underground_ores"
+}

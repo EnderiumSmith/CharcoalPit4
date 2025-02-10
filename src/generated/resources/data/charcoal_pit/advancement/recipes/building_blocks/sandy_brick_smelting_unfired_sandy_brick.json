@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "charcoal_pit:sandy_brick_smelting_unfired_sandy_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_unfired_sandy_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:unfired_sandy_brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_unfired_sandy_brick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "charcoal_pit:sandy_brick_smelting_unfired_sandy_brick"
+    ]
+  }
+}

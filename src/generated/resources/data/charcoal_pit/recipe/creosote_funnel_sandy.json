@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "B": {
+      "item": "charcoal_pit:sandy_brick"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "I": {
+      "item": "minecraft:iron_bars"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BGB",
+    "BIB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:creosote_funnel_sandy"
+  }
+}

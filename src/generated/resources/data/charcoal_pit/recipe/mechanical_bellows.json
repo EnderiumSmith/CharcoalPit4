@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "L": {
+      "item": "charcoal_pit:bellows"
+    },
+    "P": {
+      "item": "minecraft:smooth_stone_slab"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "PRP",
+    "ILI",
+    "PRP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:mechanical_bellows"
+  }
+}

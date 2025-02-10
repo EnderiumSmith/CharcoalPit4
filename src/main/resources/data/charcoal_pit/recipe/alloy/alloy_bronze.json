@@ -1,0 +1,25 @@
+{
+  "type": "charcoal_pit:alloy_mold",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "tag": "c:ingots/tin"
+    },
+    {
+      "item": "charcoal_pit:alloy_mold"
+    }
+  ],
+  "result": {
+    "item": "charcoal_pit:alloy_bronze"
+  },
+  "count": 4
+}

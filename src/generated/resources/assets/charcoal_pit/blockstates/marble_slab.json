@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "charcoal_pit:block/marble_slab"
+    },
+    "type=double": {
+      "model": "charcoal_pit:block/marble_bricks"
+    },
+    "type=top": {
+      "model": "charcoal_pit:block/marble_slab_top"
+    }
+  }
+}

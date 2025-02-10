@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "frog",
+  "ingredient": {
+    "item": "charcoal_pit:frog_leg_raw"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:frog_leg_cooked"
+  }
+}

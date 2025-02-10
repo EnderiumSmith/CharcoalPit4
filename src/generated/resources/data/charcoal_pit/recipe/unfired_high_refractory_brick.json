@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:clay_ball"
+    },
+    "F": {
+      "item": "charcoal_pit:cinder_flour"
+    },
+    "M": {
+      "item": "minecraft:magma_cream"
+    },
+    "T": {
+      "item": "charcoal_pit:mortar_of_tartar"
+    }
+  },
+  "pattern": [
+    "FTF",
+    "CMC",
+    "FTF"
+  ],
+  "result": {
+    "count": 4,
+    "id": "charcoal_pit:unfired_high_refractory_brick"
+  }
+}

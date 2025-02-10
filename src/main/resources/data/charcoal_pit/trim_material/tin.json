@@ -1,0 +1,9 @@
+{
+  "asset_name": "tin",
+  "description": {
+    "color": "#8CA9BE",
+    "translate": "trim_material.charcoal_pit.tin"
+  },
+  "ingredient": "charcoal_pit:ingot_tin",
+  "item_model_index": 0.1
+}

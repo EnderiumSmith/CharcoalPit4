@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "charcoal_pit:high_refractory_brick_smelting_unfired_high_refractory_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_unfired_high_refractory_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:unfired_high_refractory_brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_unfired_high_refractory_brick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "charcoal_pit:high_refractory_brick_smelting_unfired_high_refractory_brick"
+    ]
+  }
+}

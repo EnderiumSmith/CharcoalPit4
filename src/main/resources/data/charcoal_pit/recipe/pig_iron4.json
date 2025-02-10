@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:dusts/iron"
+      }
+    }
+  ],
+  "type": "charcoal_pit:hot_blasting",
+  "temperature": 1438,
+  "cooking_time": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "tag": "c:dusts/iron"
+  },
+  "flux": {
+    "item": "charcoal_pit:flux"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:alloy_pig_iron"
+  }
+}

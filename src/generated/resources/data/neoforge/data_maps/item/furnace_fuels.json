@@ -1,0 +1,31 @@
+{
+  "values": {
+    "charcoal_pit:aeternalis_fuel": {
+      "burn_time": 200
+    },
+    "charcoal_pit:biodiesel_bucket": {
+      "burn_time": 25600
+    },
+    "charcoal_pit:charcoal_block": {
+      "burn_time": 16000
+    },
+    "charcoal_pit:coke": {
+      "burn_time": 3200
+    },
+    "charcoal_pit:coke_block": {
+      "burn_time": 32000
+    },
+    "charcoal_pit:creosote_bucket": {
+      "burn_time": 4800
+    },
+    "charcoal_pit:ethanol_bottle": {
+      "burn_time": 3800
+    },
+    "charcoal_pit:ethanol_bucket": {
+      "burn_time": 15200
+    },
+    "charcoal_pit:glycerine": {
+      "burn_time": 1200
+    }
+  }
+}

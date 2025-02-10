@@ -1,0 +1,40 @@
+{
+  "values": {
+    "#minecraft:logs_that_burn": {
+      "clean": false,
+      "temperature": 700
+    },
+    "charcoal_pit:aeternalis_fuel": {
+      "clean": true,
+      "temperature": 1200
+    },
+    "charcoal_pit:charcoal_block": {
+      "clean": true,
+      "temperature": 900
+    },
+    "charcoal_pit:coke": {
+      "clean": true,
+      "temperature": 1100
+    },
+    "charcoal_pit:coke_block": {
+      "clean": true,
+      "temperature": 1100
+    },
+    "minecraft:blaze_rod": {
+      "clean": true,
+      "temperature": 1400
+    },
+    "minecraft:charcoal": {
+      "clean": true,
+      "temperature": 900
+    },
+    "minecraft:coal": {
+      "clean": false,
+      "temperature": 1000
+    },
+    "minecraft:coal_block": {
+      "clean": false,
+      "temperature": 1000
+    }
+  }
+}

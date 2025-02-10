@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "charcoal_pit:dwarven_candle"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  I",
+    " SR",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:explosive_spear"
+  }
+}

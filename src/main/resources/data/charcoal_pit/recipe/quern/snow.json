@@ -1,0 +1,12 @@
+{
+  "type": "charcoal_pit:quern",
+  "category": "misc",
+  "group": "quern",
+  "ingredient": {
+    "item": "minecraft:ice"
+  },
+  "result": {
+    "count": 4,
+    "id": "minecraft:snowball"
+  }
+}

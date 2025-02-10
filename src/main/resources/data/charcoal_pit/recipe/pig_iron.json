@@ -1,0 +1,16 @@
+{
+  "type": "charcoal_pit:hot_blasting",
+  "temperature": 1438,
+  "cooking_time": 600,
+  "experience": 0.7,
+  "ingredient": {
+    "tag": "c:ores/iron"
+  },
+  "flux": {
+    "item": "charcoal_pit:flux"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:alloy_pig_iron"
+  }
+}

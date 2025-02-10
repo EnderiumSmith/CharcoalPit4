@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 400,
+  "experience": 0.35,
+  "group": "four",
+  "ingredient": {
+    "item": "charcoal_pit:flour"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:bread"
+  }
+}

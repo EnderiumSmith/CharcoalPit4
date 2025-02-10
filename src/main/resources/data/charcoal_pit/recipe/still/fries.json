@@ -1,0 +1,15 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "charcoal_pit:seed_oil"
+  },
+  "amount_in": 10,
+  "item_in": {
+    "item": "minecraft:potato"
+  },
+  "item_out": {
+    "count": 1,
+    "id": "charcoal_pit:poisonous_potato_fries"
+  },
+  "process_time": 200
+}

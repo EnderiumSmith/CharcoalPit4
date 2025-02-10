@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "minecraft:redstone_torch"
+    },
+    {
+      "item": "minecraft:stone_button"
+    },
+    {
+      "tag": "c:stones"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:dynamite_remote"
+  }
+}

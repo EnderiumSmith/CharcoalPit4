@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "charcoal_pit:ingot_chicken"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "charcoal_pit:nugget_chicken"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "charcoal_pit:item/javelin_throwing",
+  "textures": {
+    "layer0": "charcoal_pit:item/explosive_spear_long"
+  }
+}

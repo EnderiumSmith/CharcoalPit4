@@ -1,0 +1,32 @@
+{
+  "values": [
+    "minecraft:apple",
+    "minecraft:potato",
+    "minecraft:beetroot",
+    "minecraft:wheat",
+    "minecraft:sweet_berries",
+    "minecraft:honeycomb",
+    "minecraft:sugar",
+    "minecraft:glow_berries",
+    {
+      "id": "#c:crops/grapes",
+      "required": false
+    },
+    {
+      "id": "#c:grain/rice",
+      "required": false
+    },
+    {
+      "id": "#c:crops/plum",
+      "required": false
+    },
+    {
+      "id": "#c:crops/maize",
+      "required": false
+    },
+    {
+      "id": "#c:grain/maize",
+      "required": false
+    }
+  ]
+}

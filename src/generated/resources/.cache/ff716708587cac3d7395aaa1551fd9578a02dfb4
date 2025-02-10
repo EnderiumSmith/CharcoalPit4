@@ -1,0 +1,4 @@
+// 1.21.1	2024-11-03T05:02:32.793735795	Tags for minecraft:damage_type mod id charcoal_pit
+6f6051f19f7b6b5463a52de8c3326aac59ceafa6 data/minecraft/tags/damage_type/bypasses_effects.json
+029d9a2540c445b027968f3d30f8bc5c33ff3c01 data/minecraft/tags/damage_type/is_player_attack.json
+029d9a2540c445b027968f3d30f8bc5c33ff3c01 data/minecraft/tags/damage_type/is_projectile.json

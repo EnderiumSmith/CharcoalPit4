@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "charcoal_pit:block/chiseled_bronze",
+    "bottom": "minecraft:block/smooth_stone",
+    "front": "charcoal_pit:block/press_front",
+    "side": "charcoal_pit:block/press_side"
+  }
+}

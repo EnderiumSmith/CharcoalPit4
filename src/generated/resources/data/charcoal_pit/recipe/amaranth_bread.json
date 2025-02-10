@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "charcoal_pit:flour"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "charcoal_pit:amaranth_sapling"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:amaranth_bread"
+  }
+}

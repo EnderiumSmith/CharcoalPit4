@@ -1,0 +1,29 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "charcoal_pit:item/jerry_can"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [65, 90, 0],
+			"translation": [0, -2, -2],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [65, -90, 0],
+			"translation": [0, -2, -2],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 90, -25],
+			"translation": [1.13, 3.2, 1.13],
+			"scale": [0.68, 0.68, 0.68]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -90, 25],
+			"translation": [1.13, 3.2, 1.13],
+			"scale": [0.68, 0.68, 0.68]
+		}
+	}
+}

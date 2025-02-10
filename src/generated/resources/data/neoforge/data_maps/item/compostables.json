@@ -1,0 +1,61 @@
+{
+  "values": {
+    "charcoal_pit:amaranth_leaves": {
+      "chance": 0.3
+    },
+    "charcoal_pit:amaranth_sapling": {
+      "chance": 1.0
+    },
+    "charcoal_pit:apple_leaves": {
+      "chance": 0.3
+    },
+    "charcoal_pit:apple_sapling": {
+      "chance": 0.3
+    },
+    "charcoal_pit:cherry": {
+      "chance": 0.65
+    },
+    "charcoal_pit:cherry_leaves": {
+      "chance": 0.3
+    },
+    "charcoal_pit:cherry_sapling": {
+      "chance": 0.3
+    },
+    "charcoal_pit:douglas_leaves": {
+      "chance": 0.3
+    },
+    "charcoal_pit:douglas_sapling": {
+      "chance": 0.3
+    },
+    "charcoal_pit:leek": {
+      "chance": 0.65
+    },
+    "charcoal_pit:olive_leaves": {
+      "chance": 0.3
+    },
+    "charcoal_pit:olive_sapling": {
+      "chance": 0.3
+    },
+    "charcoal_pit:olives": {
+      "chance": 0.65
+    },
+    "charcoal_pit:orange": {
+      "chance": 0.65
+    },
+    "charcoal_pit:orange_leaves": {
+      "chance": 0.3
+    },
+    "charcoal_pit:orange_sapling": {
+      "chance": 0.3
+    },
+    "charcoal_pit:walnut": {
+      "chance": 0.65
+    },
+    "charcoal_pit:walnut_leaves": {
+      "chance": 0.3
+    },
+    "charcoal_pit:walnut_sapling": {
+      "chance": 0.3
+    }
+  }
+}

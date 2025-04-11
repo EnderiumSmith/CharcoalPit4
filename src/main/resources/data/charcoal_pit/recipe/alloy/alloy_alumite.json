@@ -1,0 +1,37 @@
+{
+  "type": "charcoal_pit:alloy_mold",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:ingots/aluminium"
+    },
+    {
+      "tag": "c:ingots/aluminium"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "tag": "c:ingots/aluminium"
+    },
+    {
+      "tag": "c:ingots/aluminium"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "charcoal_pit:obsidian_powder"
+    },
+    {
+      "item": "charcoal_pit:obsidian_powder"
+    },
+    {
+      "item": "charcoal_pit:alloy_mold"
+    }
+  ],
+  "result": {
+    "item": "charcoal_pit:alloy_alumite"
+  },
+  "count": 6
+}

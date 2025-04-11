@@ -2,17 +2,14 @@ package charcoalPit.gui.menu;
 
 import charcoalPit.block.BlockStill;
 import charcoalPit.core.DataComponentRegistry;
-import charcoalPit.core.ItemRegistry;
-import charcoalPit.dataMap.DataMapRegistry;
 import charcoalPit.gui.MenuTypeRegistry;
 import charcoalPit.recipe.StillRecipe;
 import charcoalPit.tile.TIleStill;
+
 import net.minecraft.client.Minecraft;
-import net.minecraft.core.Holder;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.neoforged.api.distmarker.Dist;
@@ -22,7 +19,6 @@ import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.neoforged.neoforge.fluids.capability.templates.FluidTank;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.SlotItemHandler;
-import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 
 public class StillMenu extends AbstractContainerMenu {
 
@@ -33,7 +29,7 @@ public class StillMenu extends AbstractContainerMenu {
     public IFluidHandler input,output;
 
     public StillMenu(int containerId, Inventory playerInv) {
-        this(containerId,playerInv,new ItemStackHandler(3),null,new SimpleContainerData(4),ContainerLevelAccess.NULL);
+        this(containerId,playerInv,new ItemStackHandler(4),null,new SimpleContainerData(4),ContainerLevelAccess.NULL);
     }
 
     public StillMenu(int containerId, Inventory playerInv, TIleStill machine, ContainerLevelAccess world) {
@@ -67,17 +63,39 @@ public class StillMenu extends AbstractContainerMenu {
         super(MenuTypeRegistry.STILL.get(), containerId);
         this.world=world;
         this.machine=machine;
-        this.addSlot(new SlotItemHandler(inv,0,53,22));
-        this.addSlot(new SlotItemHandler(inv,1,107,53){
+        this.addSlot(new SlotItemHandler(inv,0,53,17){
             @Override
             public boolean mayPlace(ItemStack stack) {
-                return false;
+                return StillRecipe.isValidIngredient(stack, Minecraft.getInstance().level);
+            }
+        });
+        this.addSlot(new SlotItemHandler(inv,3,53,35){
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return StillRecipe.isValidCatalyst(stack, Minecraft.getInstance().level);
             }
         });
         this.addSlot(new SlotItemHandler(inv,2,53,53){
             @Override
             public boolean mayPlace(ItemStack stack) {
                 return stack.getBurnTime(null)>0;
+            }
+        });
+        this.addSlot(new SlotItemHandler(inv,1,107,53){
+            @Override
+            public boolean mayPlace(ItemStack stack) {
+                return false;
+            }
+
+            @Override
+            public void onTake(Player player, ItemStack stack) {
+                super.onTake(player, stack);
+                if(machine!=null){
+                    if(machine.xp>0){
+                        player.giveExperiencePoints((int) machine.xp);
+                        machine.xp-=(int)machine.xp;
+                    }
+                }
             }
         });
 
@@ -157,17 +175,16 @@ public class StillMenu extends AbstractContainerMenu {
 
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
-        final int SLOTS=3;
         ItemStack itemstack = ItemStack.EMPTY;
         Slot slot = this.slots.get(index);
         if (slot != null && slot.hasItem()) {
             ItemStack itemstack1 = slot.getItem();
             itemstack = itemstack1.copy();
-            if (index < SLOTS) {
-                if (!this.moveItemStackTo(itemstack1, SLOTS, 35+SLOTS, true)) {
+            if (index < 4) {
+                if (!this.moveItemStackTo(itemstack1, 3, 40, true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!this.moveItemStackTo(itemstack1, 0, SLOTS, false)) {
+            } else if (!this.moveItemStackTo(itemstack1, 0, 3, false)) {
                 return ItemStack.EMPTY;
             }
 

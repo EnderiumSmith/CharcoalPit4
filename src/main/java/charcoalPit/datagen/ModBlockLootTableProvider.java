@@ -50,9 +50,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockRegistry.MARBLE_PILLAR.get());
         add(BlockRegistry.MARBLE_SLAB.get(), block->createSlabItemTable(BlockRegistry.MARBLE_SLAB.get()));
         dropSelf(BlockRegistry.DWARVEN_CANDLE.get());
-        dropSelf(BlockRegistry.CREOSOTE_FUNNEL_BRICK.get());
-        dropSelf(BlockRegistry.CREOSOTE_FUNNEL_SANDY.get());
-        dropSelf(BlockRegistry.CREOSOTE_FUNNEL_NETHER.get());
         dropSelf(BlockRegistry.HIGH_REFRACTORY_BRICKS.get());
         dropSelf(BlockRegistry.BLAST_FURNACE.get());
         dropSelf(BlockRegistry.BRONZE_BLOCK.get());
@@ -86,6 +83,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockRegistry.PINK_POT.get());
         dropSelf(BlockRegistry.NEST_BOX.get());
         dropSelf(BlockRegistry.FEEDING_THROUGH.get());
+        dropSelf(BlockRegistry.BELLOW_PUMP.get());
+        dropSelf(BlockRegistry.ALUMINIUM_BLOCK.get());
+        dropSelf(BlockRegistry.ALUMITE_BLOCK.get());
+        add(BlockRegistry.ORE_PLATINUM.get(), block->createOreDrop(BlockRegistry.ORE_PLATINUM.get(), ItemRegistry.RAW_PLATINUM.get()));
+        add(BlockRegistry.ORE_DEEPSLATE_PLATINUM.get(), block->createOreDrop(BlockRegistry.ORE_DEEPSLATE_PLATINUM.get(), ItemRegistry.RAW_PLATINUM.get()));
+        dropSelf(BlockRegistry.PLATINUM_BLOCK.get());
+        dropSelf(BlockRegistry.ENDERIUM_BLOCK.get());
+        add(BlockRegistry.ORE_CHALCOCITE.get(), block -> createOreDrop(BlockRegistry.ORE_CHALCOCITE.get(), ItemRegistry.RAW_CHALCOCITE.get()));
+        dropSelf(BlockRegistry.RAW_CHALCOCITE_BLOCK.get());
+        dropSelf(BlockRegistry.BAMBOO_CHARCOAL.get());
+        dropSelf(BlockRegistry.COKE_OVEN.get());
     }
 
     @Override
@@ -96,14 +104,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 BlockRegistry.ORE_TIN.get(),BlockRegistry.MECHANICAL_BELLOWS.get(),BlockRegistry.BASALT.get(),BlockRegistry.BASALT_POLISHED.get(),BlockRegistry.BASALT_BRICKS.get(),
                 BlockRegistry.BASALT_SLAB.get(),BlockRegistry.BASALT_STAIRS.get(),BlockRegistry.BASALT_WALL.get(),BlockRegistry.BASALT_PILLAR.get(),
                 BlockRegistry.MARBLE.get(),BlockRegistry.MARBLE_POLISHED.get(),BlockRegistry.MARBLE_BRICKS.get(),BlockRegistry.MARBLE_SLAB.get(),BlockRegistry.MARBLE_STAIRS.get(),
-                BlockRegistry.MARBLE_WALL.get(),BlockRegistry.MARBLE_PILLAR.get(),BlockRegistry.DWARVEN_CANDLE.get(),
-                BlockRegistry.CREOSOTE_FUNNEL_BRICK.get(),BlockRegistry.CREOSOTE_FUNNEL_SANDY.get(),BlockRegistry.CREOSOTE_FUNNEL_NETHER.get(),BlockRegistry.HIGH_REFRACTORY_BRICKS.get(),
+                BlockRegistry.MARBLE_WALL.get(),BlockRegistry.MARBLE_PILLAR.get(),BlockRegistry.DWARVEN_CANDLE.get(),BlockRegistry.HIGH_REFRACTORY_BRICKS.get(),
                 BlockRegistry.BLAST_FURNACE.get(),BlockRegistry.BRONZE_BLOCK.get(),BlockRegistry.APPLE_SAPLING.get(),BlockRegistry.CHERRY_SAPLING.get(),
                 BlockRegistry.OLIVE_SAPLING.get(),BlockRegistry.ORANGE_SAPLING.get(),BlockRegistry.WALNUT_SAPLING.get(),BlockRegistry.DOUGLAS_SAPLING.get(),BlockRegistry.STILL.get(),
                 BlockRegistry.STEEL_BLOCK.get(),BlockRegistry.PRESS.get(),BlockRegistry.TIN_BLOCK.get(),BlockRegistry.QUERN.get(),
                 BlockRegistry.CERAMIC_POT.get(),BlockRegistry.WHITE_POT.get(),BlockRegistry.LIGHT_GRAY_POT.get(),BlockRegistry.GRAY_POT.get(),BlockRegistry.BLACK_POT.get(),
                 BlockRegistry.BROWN_POT.get(),BlockRegistry.RED_POT.get(),BlockRegistry.ORANGE_POT.get(),BlockRegistry.YELLOW_POT.get(),BlockRegistry.LIME_POT.get(),
                 BlockRegistry.GREEN_POT.get(),BlockRegistry.CYAN_POT.get(),BlockRegistry.LIGHT_BLUE_POT.get(),BlockRegistry.BLUE_POT.get(),BlockRegistry.PURPLE_POT.get(),
-                BlockRegistry.MAGENTA_POT.get(),BlockRegistry.PINK_POT.get(),BlockRegistry.NEST_BOX.get(),BlockRegistry.FEEDING_THROUGH.get());
+                BlockRegistry.MAGENTA_POT.get(),BlockRegistry.PINK_POT.get(),BlockRegistry.NEST_BOX.get(),BlockRegistry.FEEDING_THROUGH.get(),BlockRegistry.BELLOW_PUMP.get(),
+                BlockRegistry.ALUMINIUM_BLOCK.get(),BlockRegistry.ALUMITE_BLOCK.get(),BlockRegistry.ORE_PLATINUM.get(),BlockRegistry.ORE_DEEPSLATE_PLATINUM.get(),BlockRegistry.PLATINUM_BLOCK.get(),
+                BlockRegistry.ENDERIUM_BLOCK.get(),BlockRegistry.ORE_CHALCOCITE.get(),BlockRegistry.RAW_CHALCOCITE_BLOCK.get(),BlockRegistry.BAMBOO_CHARCOAL.get(),BlockRegistry.COKE_OVEN.get());
     }
 }

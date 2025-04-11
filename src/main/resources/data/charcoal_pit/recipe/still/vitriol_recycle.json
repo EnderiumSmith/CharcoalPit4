@@ -1,0 +1,11 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "charcoal_pit:hydrogen_sulfide"
+  },
+  "amount_in": 6400,
+  "item_out": {
+    "item": "charcoal_pit:sulfur"
+  },
+  "process_time": 100
+}

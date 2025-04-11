@@ -13,7 +13,7 @@ public class BlastFurnaceScreen extends AbstractContainerScreen<BlastFurnaceMenu
     public static final ResourceLocation GUI_TEXTURES=ResourceLocation.fromNamespaceAndPath(CharcoalPit.MODID,"textures/gui/container/blast_furnace.png");
 
     public static final int C_TO_MIN=273-1000;
-    public static final int MAX_TEMP_LOWER=2700-1000;
+    public static final int MAX_TEMP_LOWER=3300;
 
     public BlastFurnaceScreen(BlastFurnaceMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
@@ -45,7 +45,7 @@ public class BlastFurnaceScreen extends AbstractContainerScreen<BlastFurnaceMenu
             int l=progress*24/processTotal;
             guiGraphics.blit(GUI_TEXTURES,79,34,176,14,l+1,16);
         }
-        int temperature=this.menu.array.get(4)+C_TO_MIN;
+        int temperature=this.menu.array.get(4);
         if(temperature>0){
             int t=temperature*34/MAX_TEMP_LOWER;
             guiGraphics.blit(GUI_TEXTURES,47,69-t,187,95-t,3,t);

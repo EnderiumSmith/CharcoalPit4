@@ -1,0 +1,28 @@
+{
+  "type": "charcoal_pit:alloy_mold",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "charcoal_pit:salt_cake"
+    },
+    {
+      "item": "charcoal_pit:salt_cake"
+    },
+    {
+      "item": "charcoal_pit:coke_powder"
+    },
+    {
+      "item": "charcoal_pit:flux"
+    },
+    {
+      "item": "charcoal_pit:flux"
+    },
+    {
+      "item": "charcoal_pit:alloy_mold"
+    }
+  ],
+  "result": {
+    "item": "charcoal_pit:black_ash"
+  },
+  "count": 2
+}

@@ -24,7 +24,6 @@ public class CapabilityRegistry {
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK,TileEntityRegistry.BARREL.get(), (tile,side)->tile.out);
         event.registerBlockEntity(Capabilities.FluidHandler.BLOCK,TileEntityRegistry.BARREL.get(), (tile,side)->tile.tank);
         event.registerItem(Capabilities.FluidHandler.ITEM,(stack,context)->new FluidHandlerItemStack(DataComponentRegistry.FLUID_DATA,stack,16000),ItemRegistry.BARREL.get());
-        event.registerBlockEntity(Capabilities.FluidHandler.BLOCK,TileEntityRegistry.CREOSOTE_FUNNEL.get(), (tile,side)->tile.out);
         event.registerBlock(Capabilities.ItemHandler.BLOCK,(level, pos, state, blockEntity, context) -> level.getCapability(Capabilities.ItemHandler.BLOCK,pos.below(),context),BlockRegistry.BLAST_FURNACE_MIDDLE.get());
         event.registerBlockEntity(Capabilities.FluidHandler.BLOCK,TileEntityRegistry.STILL.get(),(tile,side)->tile.fluids);
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK,TileEntityRegistry.STILL.get(),(tile,side)->(side==null||side.getAxis()==Direction.Axis.Y)?tile.items:tile.side_items);
@@ -50,5 +49,8 @@ public class CapabilityRegistry {
         },ItemRegistry.JERRY_CAN.get());
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK,TileEntityRegistry.NESTING_BOX.get(), (tile,side)->tile.inventory);
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK,TileEntityRegistry.FEEDING_THROUGH.get(), (tile,side)->tile.inventory);
+        event.registerBlockEntity(Capabilities.FluidHandler.BLOCK,TileEntityRegistry.BLAST_FURNACE.get(), (tile,side)->tile.gasBoost);
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK,TileEntityRegistry.COKE_OVEN.get(), (tile,side)->tile.master==null?null:tile.master.out);
+        event.registerBlockEntity(Capabilities.FluidHandler.BLOCK,TileEntityRegistry.COKE_OVEN.get(), (tile,side)->tile.master==null?null:tile.master.fluid);
     }
 }

@@ -45,6 +45,9 @@ public class RecipeRegistry {
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<?>> QUERN=SERIALIZERS.register("quern",
             ()->new SimpleCookingSerializer<>(QuernRecipe::new, 40));
 
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<?>> COKING=SERIALIZERS.register("coking",
+            ()->new SimpleCookingSerializer<>(CokingRecipe::new, 1000));
+
 
     //RECIPE TYPES
     public static final Supplier<RecipeType<BloomeryRecipe>> BLOOMERY=RECIPE_TYPES.register("bloomery",
@@ -67,5 +70,8 @@ public class RecipeRegistry {
 
     public static final Supplier<RecipeType<QuernRecipe>> QUERN_RECIPE=RECIPE_TYPES.register("quern",
             ()->RecipeType.simple(ResourceLocation.fromNamespaceAndPath(CharcoalPit.MODID,"quern")));
+
+    public static final Supplier<RecipeType<CokingRecipe>> COKING_RECIPE=RECIPE_TYPES.register("coking",
+            ()->RecipeType.simple(ResourceLocation.fromNamespaceAndPath(CharcoalPit.MODID,"coking")));
 
 }

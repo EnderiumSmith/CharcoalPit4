@@ -1,0 +1,35 @@
+{
+  "parent": "charcoal_pit:charcoal_pit/platinum",
+  "display": {
+    "icon": {
+      "id": "charcoal_pit:calcium_carbide"
+    },
+    "title": {
+      "translate": "advancements.charcoal_pit.carbide.title"
+    },
+    "description": {
+      "translate": "advancements.charcoal_pit.carbide.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "item1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:calcium_carbide"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item1"
+    ]
+  ]
+}

@@ -30,9 +30,6 @@
     "charcoal_pit:marble_slab",
     "charcoal_pit:marble_wall",
     "charcoal_pit:marble_pillar",
-    "charcoal_pit:creosote_funnel_brick",
-    "charcoal_pit:creosote_funnel_sandy",
-    "charcoal_pit:creosote_funnel_nether",
     "charcoal_pit:high_refractory_bricks",
     "charcoal_pit:blast_furnace_middle",
     "charcoal_pit:blast_furnace_chimney",
@@ -58,6 +55,16 @@
     "charcoal_pit:blue_pot",
     "charcoal_pit:purple_pot",
     "charcoal_pit:magenta_pot",
-    "charcoal_pit:pink_pot"
+    "charcoal_pit:pink_pot",
+    "charcoal_pit:bellow_pump",
+    "charcoal_pit:aluminium_block",
+    "charcoal_pit:alumite_block",
+    "charcoal_pit:ore_platinum",
+    "charcoal_pit:ore_deepslate_platinum",
+    "charcoal_pit:platinum_block",
+    "charcoal_pit:enderium_block",
+    "charcoal_pit:ore_dripstone_copper",
+    "charcoal_pit:bamboo_charcoal",
+    "charcoal_pit:coke_oven"
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "charcoal_pit:niterwater"
+  },
+  "amount_in": 250,
+  "item_out": {
+    "item": "charcoal_pit:niter"
+  },
+  "process_time": 200
+}

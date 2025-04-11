@@ -86,13 +86,9 @@ public class BlastFurnaceMenu extends AbstractContainerMenu {
             public void onTake(Player player, ItemStack stack) {
                 super.onTake(player, stack);
                 if(tile!=null){
-                    if(tile.xp>1){
-                        ExperienceOrb.award((ServerLevel) tile.getLevel(),tile.getBlockPos().getCenter(),(int)tile.xp);
+                    if(tile.xp>0){
+                        player.giveExperiencePoints((int) tile.xp);
                         tile.xp-=(int)tile.xp;
-                        if(tile.getLevel().getRandom().nextFloat()<tile.xp){
-                            ExperienceOrb.award((ServerLevel) tile.getLevel(),tile.getBlockPos().getCenter(),1);
-                            tile.xp=0;
-                        }
                     }
                 }
             }

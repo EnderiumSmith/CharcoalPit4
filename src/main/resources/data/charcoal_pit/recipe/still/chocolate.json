@@ -5,11 +5,15 @@
   },
   "amount_in": 250,
   "item_in": {
-    "item": "charcoal_pit:chocolate_powder"
+    "item": "minecraft:cocoa_beans"
+  },
+  "item_amount": 4,
+  "catalyst": {
+    "item": "minecraft:sugar"
   },
   "item_out": {
-    "count": 1,
-    "id": "charcoal_pit:chocolate_bar"
+    "item": "charcoal_pit:chocolate_bar"
   },
+  "xp": 0.35,
   "process_time": 100
 }

@@ -1,6 +1,7 @@
 package charcoalPit.core;
 
 import charcoalPit.CharcoalPit;
+import charcoalPit.block.BlockBellowPump;
 import charcoalPit.items.*;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
@@ -8,9 +9,14 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.BundleContents;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
+
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -34,10 +40,29 @@ public class ItemRegistry {
 
     //misc items
     public static final DeferredItem<Item> COKE=ITEMS.registerSimpleItem("coke");
+    public static final DeferredItem<Item> COKE_POWDER=ITEMS.registerSimpleItem("coke_powder");
     public static final DeferredItem<ItemAeternalisFuel> AETERNALIS=ITEMS.register("aeternalis_fuel",
             ()->new ItemAeternalisFuel(new Item.Properties().rarity(Rarity.EPIC)));
+    //chemicals
     public static final DeferredItem<Item> FLUX=ITEMS.registerSimpleItem("flux");
     public static final DeferredItem<Item> QUICKLIME=ITEMS.registerSimpleItem("quicklime");
+    public static final DeferredItem<Item> CALCIUM_CARBIDE=ITEMS.registerSimpleItem("calcium_carbide");
+    public static final DeferredItem<Item> SULFUR=ITEMS.registerSimpleItem("sulfur");
+    public static final DeferredItem<Item> NITER=ITEMS.registerSimpleItem("niter");
+    public static final DeferredItem<Item> OBSIDIAN_POWDER=ITEMS.registerSimpleItem("obsidian_powder");
+    public static final DeferredItem<Item> TIN_DUST=ITEMS.registerSimpleItem("dust_tin");
+    public static final DeferredItem<Item> PLATINUM_DUST=ITEMS.registerSimpleItem("dust_platinum",new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+    public static final DeferredItem<Item> ENDERIUM_DUST=ITEMS.registerSimpleItem("dust_enderium",new Item.Properties().rarity(Rarity.RARE).fireResistant());
+
+    public static final DeferredItem<Item> SALT=ITEMS.registerSimpleItem("salt");
+    public static final DeferredItem<Item> SALT_CAKE=ITEMS.registerSimpleItem("salt_cake");
+    public static final DeferredItem<Item> BLACK_ASH=ITEMS.registerSimpleItem("black_ash");
+    public static final DeferredItem<Item> NATRON=ITEMS.registerSimpleItem("natron");
+    public static final DeferredItem<Item> LYE=ITEMS.registerSimpleItem("lye");
+    public static final DeferredItem<Item> ALUM=ITEMS.registerSimpleItem("alum");
+    public static final DeferredItem<Item> ALUMINA=ITEMS.registerSimpleItem("alumina");
+    public static final DeferredItem<Item> ALUMINIUM_CHLORIDE=ITEMS.registerSimpleItem("aluminium_chloride");
+    public static final DeferredItem<Item> GREEN_VITRIOL=ITEMS.registerSimpleItem("green_vitriol");
     public static final DeferredItem<Item> CINDER_FLOUR=ITEMS.registerSimpleItem("cinder_flour");
     public static final DeferredItem<Item> MORTAR_OF_TARTAR=ITEMS.registerSimpleItem("mortar_of_tartar");
     public static final DeferredItem<Item> ASH=ITEMS.registerSimpleItem("ash");
@@ -52,15 +77,25 @@ public class ItemRegistry {
 
     public static final DeferredItem<Item> RAW_TIN_NUGGET=ITEMS.registerSimpleItem("raw_tin_nugget");
     public static final DeferredItem<Item> RAW_TIN=ITEMS.registerSimpleItem("raw_tin");
+    public static final DeferredItem<Item> RAW_PLATINUM=ITEMS.registerSimpleItem("raw_platinum", new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+    public static final DeferredItem<Item> RAW_CHALCOCITE=ITEMS.registerSimpleItem("raw_chalcocite");
 
     //ingots
     public static final DeferredItem<Item> TIN=ITEMS.registerSimpleItem("ingot_tin");
     public static final DeferredItem<Item> BRONZE=ITEMS.registerSimpleItem("alloy_bronze");
     public static final DeferredItem<Item> PIG_IRON=ITEMS.registerSimpleItem("alloy_pig_iron");
     public static final DeferredItem<Item> STEEL=ITEMS.registerSimpleItem("alloy_steel");
-    public static final DeferredItem<Item> RED_ALLOY=ITEMS.registerSimpleItem("alloy_red");
-    /*public static final DeferredItem<Item> STEEL_GEAR=ITEMS.registerSimpleItem("gear_steel");
-    public static final DeferredItem<Item> ENGINE_ITEM=ITEMS.registerSimpleItem("engine_item");*/
+    public static final DeferredItem<Item> SODIUM=ITEMS.register("ingot_sodium",
+            ()->new ItemSodium(new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<Item> ALUMINIUM=ITEMS.registerSimpleItem("ingot_aluminium",new Item.Properties().rarity(Rarity.UNCOMMON));
+    public static final DeferredItem<Item> ALUMITE=ITEMS.registerSimpleItem("alloy_alumite",new Item.Properties().rarity(Rarity.UNCOMMON));
+    public static final DeferredItem<Item> PLATINUM=ITEMS.registerSimpleItem("ingot_platinum",new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+    public static final DeferredItem<Item> ENDERIUM=ITEMS.registerSimpleItem("alloy_enderium",new Item.Properties().rarity(Rarity.RARE).fireResistant());
+    public static final DeferredItem<Item> ENDERIUM_DOUBLE=ITEMS.registerSimpleItem("double_ingot_enderium",new Item.Properties().rarity(Rarity.RARE).fireResistant());
+    //public static final DeferredItem<Item> RED_ALLOY=ITEMS.registerSimpleItem("alloy_red");
+    public static final DeferredItem<Item> RESONANT_BOTTLE=ITEMS.registerSimpleItem("resonant_bottle",new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).rarity(Rarity.UNCOMMON).stacksTo(16));
+    public static final DeferredItem<ItemChargedEchoShard> CHARGED_ECHO_SHARD=ITEMS.register("charged_echo_shard",
+            ()->new ItemChargedEchoShard(new Item.Properties().rarity(Rarity.UNCOMMON)));
 
     //other tools
     public static final DeferredItem<ItemBlockDynamite> DWARVEN_CANDLE=ITEMS.register("dwarven_candle",
@@ -76,7 +111,7 @@ public class ItemRegistry {
     public static final DeferredItem<ItemJerryCan> JERRY_CAN=ITEMS.register("jerry_can",
             ()->new ItemJerryCan(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<ItemMusket> MUSKET=ITEMS.register("musket",
-            ()->new ItemMusket(new Item.Properties().stacksTo(1).durability(375).attributes(SwordItem.createAttributes(ToolTiers.STEEL,3F,-2.4F))));
+            ()->new ItemMusket(new Item.Properties().stacksTo(1).durability(ToolTiers.STEEL.getUses()).attributes(SwordItem.createAttributes(ToolTiers.STEEL,0.5F,-2F))));
 
 
     public static final DeferredItem<ItemClub> CLUB=ITEMS.register("wooden_club",
@@ -115,13 +150,70 @@ public class ItemRegistry {
     public static final DeferredItem<ShovelItem> STEEL_SHOVEL=ITEMS.register("steel_shovel",
             ()->new ShovelItem(ToolTiers.STEEL,new Item.Properties().attributes(ShovelItem.createAttributes(ToolTiers.STEEL,1.5F,-3F))));
     public static final DeferredItem<AxeItem> STEEL_AXE=ITEMS.register("steel_axe",
-            ()->new AxeItem(ToolTiers.STEEL,new Item.Properties().attributes(AxeItem.createAttributes(ToolTiers.STEEL,5.5F,-3F))));
+            ()->new AxeItem(ToolTiers.STEEL,new Item.Properties().attributes(AxeItem.createAttributes(ToolTiers.STEEL,5F,-3F))));
     public static final DeferredItem<SwordItem> STEEL_SWORD=ITEMS.register("steel_sword",
             ()->new SwordItem(ToolTiers.STEEL,new Item.Properties().attributes(SwordItem.createAttributes(ToolTiers.STEEL,3F,-2.4F))));
     public static final DeferredItem<HoeItem> STEEL_HOE=ITEMS.register("steel_hoe",
-            ()->new HoeItem(ToolTiers.STEEL,new Item.Properties().attributes(HoeItem.createAttributes(ToolTiers.STEEL,-2F,-2F))));
+            ()->new HoeItem(ToolTiers.STEEL,new Item.Properties().attributes(HoeItem.createAttributes(ToolTiers.STEEL,-2.5F,-1F))));
     public static final DeferredItem<ItemKnife> STEEL_KNIFE=ITEMS.register("steel_knife",
             ()->new ItemKnife(ToolTiers.STEEL,new Item.Properties().attributes(SwordItem.createAttributes(ToolTiers.STEEL,0.5F,-2F))));
+    //alumite tools
+    public static final DeferredItem<PickaxeItem> ALUMITE_PICK=ITEMS.register("alumite_pickaxe",
+            ()->new PickaxeItem(ToolTiers.ALUMITE,new Item.Properties().attributes(PickaxeItem.createAttributes(ToolTiers.ALUMITE,1F,-2.8F)).rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<ShovelItem> ALUMITE_SHOVEL=ITEMS.register("alumite_shovel",
+            ()->new ShovelItem(ToolTiers.ALUMITE,new Item.Properties().attributes(ShovelItem.createAttributes(ToolTiers.ALUMITE,1.5F,-3F)).rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<AxeItem> ALUMITE_AXE=ITEMS.register("alumite_axe",
+            ()->new AxeItem(ToolTiers.ALUMITE,new Item.Properties().attributes(AxeItem.createAttributes(ToolTiers.ALUMITE,6F,-3F)).rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<SwordItem> ALUMITE_SWORD=ITEMS.register("alumite_sword",
+            ()->new SwordItem(ToolTiers.ALUMITE,new Item.Properties().attributes(SwordItem.createAttributes(ToolTiers.ALUMITE,3F,-2.4F)).rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<HoeItem> ALUMITE_HOE=ITEMS.register("alumite_hoe",
+            ()->new HoeItem(ToolTiers.ALUMITE,new Item.Properties().attributes(HoeItem.createAttributes(ToolTiers.ALUMITE,-2F,-1F)).rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<ItemKnife> ALUMINIUM_KNIFE=ITEMS.register("aluminium_knife",
+            ()->new ItemKnife(ToolTiers.ALUMINIUM,new Item.Properties().attributes(SwordItem.createAttributes(ToolTiers.ALUMINIUM,0.5F,-2F)).rarity(Rarity.UNCOMMON)));
+    //enderium tools
+    public static final DeferredItem<PickaxeItem> ENDERIUM_PICK=ITEMS.register("enderium_pickaxe",
+            ()->new PickaxeItem(ToolTiers.ENDERIUM,new Item.Properties().attributes(PickaxeItem.createAttributes(ToolTiers.ENDERIUM,1F,-2.8F)).rarity(Rarity.RARE).fireResistant()));
+    public static final DeferredItem<ShovelItem> ENDERIUM_SHOVEL=ITEMS.register("enderium_shovel",
+            ()->new ShovelItem(ToolTiers.ENDERIUM,new Item.Properties().attributes(ShovelItem.createAttributes(ToolTiers.ENDERIUM,1.5F,-3F)).rarity(Rarity.RARE).fireResistant()));
+    public static final DeferredItem<AxeItem> ENDERIUM_AXE=ITEMS.register("enderium_axe",
+            ()->new AxeItem(ToolTiers.ENDERIUM,new Item.Properties().attributes(AxeItem.createAttributes(ToolTiers.ENDERIUM,5F,-3F)).rarity(Rarity.RARE).fireResistant()));
+    public static final DeferredItem<SwordItem> ENDERIUM_SWORD=ITEMS.register("enderium_sword",
+            ()->new SwordItem(ToolTiers.ENDERIUM,new Item.Properties().attributes(SwordItem.createAttributes(ToolTiers.ENDERIUM,3F,-2.4F)).rarity(Rarity.RARE).fireResistant()));
+    public static final DeferredItem<HoeItem> ENDERIUM_HOE=ITEMS.register("enderium_hoe",
+            ()->new HoeItem(ToolTiers.ENDERIUM,new Item.Properties().attributes(HoeItem.createAttributes(ToolTiers.ENDERIUM,-5F,-0F)).rarity(Rarity.RARE).fireResistant()));
+    public static final DeferredItem<MaceItem> ENDERIUM_MACE=ITEMS.register("enderium_mace",
+            ()->new MaceItem(new Item.Properties().durability(1751).component(DataComponents.TOOL, MaceItem.createToolProperties()).attributes(createMaceAttributes()).rarity(Rarity.RARE).fireResistant()){
+                @Override
+                public boolean isValidRepairItem(ItemStack stack, ItemStack repairCandidate) {
+                    return repairCandidate.is(ENDERIUM);
+                }
+            });
+    public static final DeferredItem<ItemKnife> PLATINUM_KNIFE=ITEMS.register("platinum_knife",
+            ()->new ItemKnife(ToolTiers.PLATINUM,new Item.Properties().attributes(SwordItem.createAttributes(ToolTiers.PLATINUM,0.5F,-2F)).rarity(Rarity.UNCOMMON).fireResistant()));
+
+    public static final DeferredItem<ItemSoulDrinker> SOUL_DRINKER=ITEMS.register("soul_drinker",
+            ()->new ItemSoulDrinker(ToolTiers.SOUL_DRINKER,new Item.Properties().attributes(SwordItem.createAttributes(ToolTiers.SOUL_DRINKER,3F,-2.4F)).rarity(Rarity.UNCOMMON).fireResistant()));
+
+    public static ItemAttributeModifiers createMaceAttributes() {
+        return ItemAttributeModifiers.builder()
+                .add(
+                        Attributes.ATTACK_SPEED, new AttributeModifier(Item.BASE_ATTACK_SPEED_ID, -3.2F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND
+                )
+                .add(
+                        Attributes.ATTACK_DAMAGE, new AttributeModifier(Item.BASE_ATTACK_DAMAGE_ID, 6.0, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND
+                )
+                .build();
+    }
+
+    //copper armor
+    public static final DeferredItem<ArmorItem> COPPER_HELMET=ITEMS.register("copper_helmet",
+            ()->new ArmorItem(ArmorMaterials.COPPER, ArmorItem.Type.HELMET,new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(7))));
+    public static final DeferredItem<ArmorItem> COPPER_CHESTPLATE=ITEMS.register("copper_chestplate",
+            ()->new ArmorItem(ArmorMaterials.COPPER, ArmorItem.Type.CHESTPLATE,new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(7))));
+    public static final DeferredItem<ArmorItem> COPPER_LEGGINGS=ITEMS.register("copper_leggings",
+            ()->new ArmorItem(ArmorMaterials.COPPER, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(7))));
+    public static final DeferredItem<ArmorItem> COPPER_BOOTS=ITEMS.register("copper_boots",
+            ()->new ArmorItem(ArmorMaterials.COPPER, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(7))));
     //bronze armor
     public static final DeferredItem<ArmorItem> BRONZE_HELMET=ITEMS.register("bronze_helmet",
             ()->new ArmorItem(ArmorMaterials.BRONZE, ArmorItem.Type.HELMET,new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(15))));
@@ -140,6 +232,24 @@ public class ItemRegistry {
             ()->new ArmorItem(ArmorMaterials.STEEL, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(22))));
     public static final DeferredItem<ArmorItem> STEEL_BOOTS=ITEMS.register("steel_boots",
             ()->new ArmorItem(ArmorMaterials.STEEL, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(22))));
+    //alumite armor
+    public static final DeferredItem<ArmorItem> ALUMITE_HELMET=ITEMS.register("alumite_helmet",
+            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.HELMET,new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(27)).rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<ArmorItem> ALUMITE_CHESTPLATE=ITEMS.register("alumite_chestplate",
+            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.CHESTPLATE,new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(27)).rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<ArmorItem> ALUMITE_LEGGINGS=ITEMS.register("alumite_leggings",
+            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(27)).rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<ArmorItem> ALUMITE_BOOTS=ITEMS.register("alumite_boots",
+            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(27)).rarity(Rarity.UNCOMMON)));
+    //enderium armor
+    public static final DeferredItem<ArmorItem> ENDERIUM_HELMET=ITEMS.register("enderium_helmet",
+            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.HELMET,new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(35)).rarity(Rarity.RARE).fireResistant()));
+    public static final DeferredItem<ArmorItem> ENDERIUM_CHESTPLATE=ITEMS.register("enderium_chestplate",
+            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.CHESTPLATE,new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(35)).rarity(Rarity.RARE).fireResistant()));
+    public static final DeferredItem<ArmorItem> ENDERIUM_LEGGINGS=ITEMS.register("enderium_leggings",
+            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(35)).rarity(Rarity.RARE).fireResistant()));
+    public static final DeferredItem<ArmorItem> ENDERIUM_BOOTS=ITEMS.register("enderium_boots",
+            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(35)).rarity(Rarity.RARE).fireResistant()));
 
     //foods
     public static final FoodProperties LEEK=new FoodProperties.Builder().nutrition(1).saturationModifier(0.3F).fast().build();
@@ -161,7 +271,7 @@ public class ItemRegistry {
     public static final FoodProperties FOOD_ORANGE=new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).build();
     public static final FoodProperties FOOD_RAW_OLIVE=new FoodProperties.Builder().nutrition(4).saturationModifier(0.1F).effect(new MobEffectInstance(MobEffects.HUNGER,600,0),1F).build();
     public static final FoodProperties FOOD_OLIVE=new FoodProperties.Builder().nutrition(4).saturationModifier(0.6F).build();
-    public static final FoodProperties POTATO_FRIES=new FoodProperties.Builder().nutrition(6).saturationModifier(0.6F).build();
+    public static final FoodProperties POTATO_FRIES=new FoodProperties.Builder().nutrition(5).saturationModifier(0.8F).build();
     public static final FoodProperties CHICKEN_INGOT=new FoodProperties.Builder().nutrition(7).saturationModifier(0.6F).build();
     public static final FoodProperties CHICKEN_NUG=new FoodProperties.Builder().nutrition(1).saturationModifier(0.35F).fast().build();
     public static final FoodProperties ALCOHOL=new FoodProperties.Builder().nutrition(1).saturationModifier(0.3F).alwaysEdible()
@@ -179,6 +289,8 @@ public class ItemRegistry {
     public static final FoodProperties CHERRY_SANDWITCH_FOOD=new FoodProperties.Builder().nutrition(7).saturationModifier(0.8F).build();
     public static final FoodProperties ORANGE_JUICE_FOOD=new FoodProperties.Builder().nutrition(2).saturationModifier(1.2F).alwaysEdible().usingConvertsTo(Items.GLASS_BOTTLE).build();
     public static final FoodProperties STRAWBERRY_FOOD=new FoodProperties.Builder().nutrition(2).saturationModifier(0.1F).fast().build();
+    public static final FoodProperties HONEY_DEWOIS_FOOD=new FoodProperties.Builder().nutrition(1).saturationModifier(0.3F).alwaysEdible()
+            .effect(()->new MobEffectInstance(MobEffects.DIG_SPEED,20*60*3),1F).usingConvertsTo(Items.GLASS_BOTTLE).build();
 
 
     public static final DeferredItem<Item> FLOUR=ITEMS.registerSimpleItem("flour", new Item.Properties());
@@ -194,10 +306,8 @@ public class ItemRegistry {
     public static final DeferredItem<Item> DANGOS=ITEMS.registerSimpleItem("tricolor_dango",new Item.Properties().food(DANGO));
     public static final DeferredItem<Item> FROG_LEG=ITEMS.registerSimpleItem("frog_leg_raw",new Item.Properties().food(RAW_FROG));
     public static final DeferredItem<Item> FROG_LEG_COOKED=ITEMS.registerSimpleItem("frog_leg_cooked",new Item.Properties().food(FROG));
-    public static final DeferredItem<Item> CHOCOLATE_POWDER=ITEMS.registerSimpleItem("chocolate_powder");
     public static final DeferredItem<Item> CHOCOLATE_BAR=ITEMS.registerSimpleItem("chocolate_bar",new Item.Properties().food(CHOCOLATE));
     public static final DeferredItem<Item> CROISSANT=ITEMS.registerSimpleItem("croissant",new Item.Properties().food(CROISSANTE));
-    public static final DeferredItem<Item> BUTTER=ITEMS.registerSimpleItem("butter",new Item.Properties().food(BUTTER_FOOD));
     public static final DeferredItem<Item> CHEESE=ITEMS.registerSimpleItem("cheese",new Item.Properties().food(CHESSE));
     public static final DeferredItem<Item> PANCAKES=ITEMS.registerSimpleItem("pancakes",new Item.Properties().food(PANCAKE));
     //public static final DeferredItem<Item> RAW_VEGEMITE=ITEMS.registerSimpleItem("raw_vegemite",new Item.Properties().food(RVEG));
@@ -220,9 +330,15 @@ public class ItemRegistry {
             ()->new ItemAlcoholBottle(1,new Item.Properties().stacksTo(16).craftRemainder(Items.GLASS_BOTTLE).food(ALCOHOL)));
     public static final DeferredItem<ItemAlcoholBottle> ETHANOL_BOTTLE=ITEMS.register("ethanol_bottle",
             ()->new ItemAlcoholBottle(8,new Item.Properties().stacksTo(16).craftRemainder(Items.GLASS_BOTTLE).food(ETHANOL)));
+    public static final DeferredItem<ItemAlcoholBottle> HONEY_DEWOIS=ITEMS.register("honey_dewois",
+            ()->new ItemAlcoholBottle(2,new Item.Properties().stacksTo(16).craftRemainder(Items.GLASS_BOTTLE).food(HONEY_DEWOIS_FOOD)));
 
     public static final DeferredItem<BlockItem> GRAVEL_TIN=ITEMS.registerSimpleBlockItem(BlockRegistry.GRAVEL_TIN);
     public static final DeferredItem<BlockItem> ORE_TIN=ITEMS.registerSimpleBlockItem(BlockRegistry.ORE_TIN);
+    public static final DeferredItem<BlockItem> ORE_PLATINUM=ITEMS.registerSimpleBlockItem(BlockRegistry.ORE_PLATINUM, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+    public static final DeferredItem<BlockItem> ORE_DEEPSLATE_PLATINUM=ITEMS.registerSimpleBlockItem(BlockRegistry.ORE_DEEPSLATE_PLATINUM, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+    public static final DeferredItem<BlockItem> ORE_CHALCOCITE=ITEMS.registerSimpleBlockItem(BlockRegistry.ORE_CHALCOCITE);
+    public static final DeferredItem<BlockItem> RAW_CHALCOCITE_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.RAW_CHALCOCITE_BLOCK);
 
     //natural blocks
     public static final DeferredItem<BlockItem> BASALT=ITEMS.registerSimpleBlockItem(BlockRegistry.BASALT);
@@ -244,6 +360,10 @@ public class ItemRegistry {
     public static final DeferredItem<BlockItem> BRONZE_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.BRONZE_BLOCK);
     public static final DeferredItem<BlockItem> STEEL_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.STEEL_BLOCK);
     public static final DeferredItem<BlockItem> TIN_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.TIN_BLOCK);
+    public static final DeferredItem<BlockItem> ALUMINIUM_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.ALUMINIUM_BLOCK, new Item.Properties().rarity(Rarity.UNCOMMON));
+    public static final DeferredItem<BlockItem> ALUMITE_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.ALUMITE_BLOCK, new Item.Properties().rarity(Rarity.UNCOMMON));
+    public static final DeferredItem<BlockItem> PLATINUM_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.PLATINUM_BLOCK, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+    public static final DeferredItem<BlockItem> ENDERIUM_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.ENDERIUM_BLOCK, new Item.Properties().rarity(Rarity.RARE).fireResistant());
 
     public static final DeferredItem<BlockItem> LOG_PILE=ITEMS.registerSimpleBlockItem(BlockRegistry.LOG_PILE);
 
@@ -254,6 +374,7 @@ public class ItemRegistry {
     public static final DeferredItem<BlockItem> ASH_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.ASH_BLOCK);
 
     public static final DeferredItem<BlockItem> CHARCOAL_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.CHARCOAL_BLOCK);
+    public static final DeferredItem<BlockItem> BAMBOO_CHARCOAL=ITEMS.registerSimpleBlockItem(BlockRegistry.BAMBOO_CHARCOAL);
     public static final DeferredItem<BlockItem> COKE_BLOCK=ITEMS.registerSimpleBlockItem(BlockRegistry.COKE_BLOCK);
 
     public static final DeferredItem<BlockItem> SANDY_BRICKS=ITEMS.registerSimpleBlockItem(BlockRegistry.SANDY_BRICKS);
@@ -273,9 +394,7 @@ public class ItemRegistry {
 
     public static final DeferredItem<BlockItem> BLAST_FURNACE=ITEMS.registerSimpleBlockItem(BlockRegistry.BLAST_FURNACE);
 
-    public static final DeferredItem<BlockItem> CREOSOTE_FUNNEL_BRICK=ITEMS.registerSimpleBlockItem(BlockRegistry.CREOSOTE_FUNNEL_BRICK);
-    public static final DeferredItem<BlockItem> CREOSOTE_FUNNEL_SANDY=ITEMS.registerSimpleBlockItem(BlockRegistry.CREOSOTE_FUNNEL_SANDY);
-    public static final DeferredItem<BlockItem> CREOSOTE_FUNNEL_NETHER=ITEMS.registerSimpleBlockItem(BlockRegistry.CREOSOTE_FUNNEL_NETHER);
+    public static final DeferredItem<BlockItem> COKE_OVEN=ITEMS.registerSimpleBlockItem(BlockRegistry.COKE_OVEN);
 
     public static final DeferredItem<ItemBarrel> BARREL=ITEMS.register("barrel",
             ()->new ItemBarrel(BlockRegistry.BARREL.get(), new Item.Properties().stacksTo(16)));
@@ -285,6 +404,8 @@ public class ItemRegistry {
 
     public static final DeferredItem<BlockItem> STILL=ITEMS.registerSimpleBlockItem(BlockRegistry.STILL);
     public static final DeferredItem<BlockItem> PRESS=ITEMS.registerSimpleBlockItem(BlockRegistry.PRESS);
+
+    public static final DeferredItem<BlockItem> BELLOW_PUMP=ITEMS.registerSimpleBlockItem(BlockRegistry.BELLOW_PUMP);
 
     /*public static final DeferredItem<BlockItem> CRUSHER=ITEMS.registerSimpleBlockItem(BlockRegistry.CRUSHER);
 

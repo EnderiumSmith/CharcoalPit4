@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/pyrite"
+      }
+    }
+  ],
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "amount_in": 400,
+  "item_in": {
+    "tag": "c:raw_materials/pyrite"
+  },
+  "catalyst": {
+    "tag": "c:dusts/niter"
+  },
+  "chance": 0.1,
+  "fluid_out": {
+    "fluid": "charcoal_pit:oil_of_vitriol"
+  },
+  "amount_out": 200,
+  "item_out": {
+    "item": "minecraft:raw_iron"
+  },
+  "xp": 0.7,
+  "process_time": 400
+}

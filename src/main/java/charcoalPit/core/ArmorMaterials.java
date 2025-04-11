@@ -28,6 +28,14 @@ public class ArmorMaterials {
         return Ingredient.of(MethodHelper.STEEL);
     }),
     */
+    public static final Holder<ArmorMaterial> COPPER = register("copper",
+            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 1);
+                attribute.put(ArmorItem.Type.LEGGINGS, 3);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 5);
+                attribute.put(ArmorItem.Type.HELMET, 2);
+                attribute.put(ArmorItem.Type.BODY, 4);
+            }), 25, 0f, 0f, ()->Items.COPPER_INGOT);
 
     public static final Holder<ArmorMaterial> BRONZE = register("bronze",
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
@@ -36,7 +44,7 @@ public class ArmorMaterials {
                 attribute.put(ArmorItem.Type.CHESTPLATE, 6);
                 attribute.put(ArmorItem.Type.HELMET, 2);
                 attribute.put(ArmorItem.Type.BODY, 5);
-            }), 8, 0f, 0f, ItemRegistry.BRONZE);
+            }), 10, 0f, 0f, ItemRegistry.BRONZE);
 
     public static final Holder<ArmorMaterial> STEEL = register("steel",
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
@@ -46,6 +54,31 @@ public class ArmorMaterials {
                 attribute.put(ArmorItem.Type.HELMET, 2);
                 attribute.put(ArmorItem.Type.BODY, 5);
             }), 5, 1f, 0f, ItemRegistry.STEEL);
+
+    public static final Holder<ArmorMaterial> ALUMITE = register("alumite",
+            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 3);
+                attribute.put(ArmorItem.Type.LEGGINGS, 6);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 8);
+                attribute.put(ArmorItem.Type.HELMET, 3);
+                attribute.put(ArmorItem.Type.BODY, 11);
+            }), 1, 0f, 0f, ItemRegistry.ALUMITE);
+
+    public static final Holder<ArmorMaterial> ENDERIUM = register("enderium",
+            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 3);
+                attribute.put(ArmorItem.Type.LEGGINGS, 6);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 8);
+                attribute.put(ArmorItem.Type.HELMET, 3);
+                attribute.put(ArmorItem.Type.BODY, 11);
+            }), 15, 4f, 0.2f, ItemRegistry.ENDERIUM);
+
+    //LEATHER 15
+    //CHAIN 12
+    //IRON 9
+    //GOLD 25
+    //DIAMOND 10
+    //NETHERITE 15
 
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,

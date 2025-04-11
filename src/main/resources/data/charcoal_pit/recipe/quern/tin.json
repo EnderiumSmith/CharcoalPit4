@@ -1,0 +1,12 @@
+{
+  "type": "charcoal_pit:quern",
+  "category": "misc",
+  "group": "quern",
+  "ingredient": {
+    "tag": "c:ingots/tin"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:dust_tin"
+  }
+}

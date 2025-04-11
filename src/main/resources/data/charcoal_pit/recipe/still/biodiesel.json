@@ -1,19 +1,24 @@
 {
   "type": "charcoal_pit:still",
   "fluid_in": {
-    "fluid": "charcoal_pit:seed_oil"
+    "tag": "c:seed_oil"
   },
   "amount_in": 2000,
   "item_in": {
     "item": "charcoal_pit:ethanol_bottle"
   },
+  "catalyst": {
+    "tag": "c:dusts/sodium_hydroxide"
+  },
+  "chance": 0.125,
   "fluid_out": {
     "fluid": "charcoal_pit:biodiesel"
   },
   "amount_out": 2000,
   "item_out": {
-    "count": 2,
-    "id": "charcoal_pit:glycerine"
+    "item": "charcoal_pit:glycerine"
   },
+  "item_amount_out": 2,
+  "xp": 1,
   "process_time": 1200
 }

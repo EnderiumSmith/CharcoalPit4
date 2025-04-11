@@ -14,6 +14,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+
+import charcoalPit.core.ToolTiers;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.neoforged.neoforge.common.conditions.NotCondition;
@@ -65,6 +67,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('F', Items.BLAST_FURNACE)
                 .unlockedBy("",has(ItemRegistry.HIGH_REFRACTORY_BRICKS))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ItemRegistry.COKE_OVEN.get(),8)
+                .pattern("BBB")
+                .pattern("B B")
+                .pattern("BFB")
+                .define('B', ItemRegistry.HIGH_REFRACTORY_BRICKS)
+                .define('F', Items.IRON_TRAPDOOR)
+                .unlockedBy("",has(ItemRegistry.HIGH_REFRACTORY_BRICKS))
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ItemRegistry.BELLOWS.get())
                 .pattern("PLP")
                 .pattern("PLP")
@@ -83,32 +93,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('L', ItemRegistry.BELLOWS.get())
                 .unlockedBy("",has(Items.LEATHER))
                 .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ItemRegistry.CREOSOTE_FUNNEL_BRICK.get())
-                .pattern("BBB")
-                .pattern("BGB")
-                .pattern("BIB")
-                .define('B', Items.BRICK)
-                .define('G', Items.GLASS)
-                .define('I', Items.IRON_BARS)
-                .unlockedBy("",has(Items.IRON_BARS))
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ItemRegistry.CREOSOTE_FUNNEL_SANDY.get())
-                .pattern("BBB")
-                .pattern("BGB")
-                .pattern("BIB")
-                .define('B', ItemRegistry.SANDY_BRICK)
-                .define('G', Items.GLASS)
-                .define('I', Items.IRON_BARS)
-                .unlockedBy("",has(Items.IRON_BARS))
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ItemRegistry.CREOSOTE_FUNNEL_NETHER.get())
-                .pattern("BBB")
-                .pattern("BGB")
-                .pattern("BIB")
-                .define('B', Items.NETHER_BRICK)
-                .define('G', Items.GLASS)
-                .define('I', Items.IRON_BARS)
-                .unlockedBy("",has(Items.IRON_BARS))
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ItemRegistry.BELLOW_PUMP.get())
+                .pattern("SCS")
+                .pattern("PLP")
+                .pattern("SCS")
+                .define('S', Items.SMOOTH_STONE_SLAB)
+                .define('P', ItemRegistry.BELLOWS)
+                .define('L', Items.REPEATER)
+                .define('C', Items.COPPER_INGOT)
+                .unlockedBy("",has(Items.LEATHER))
                 .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ItemRegistry.BARREL.get())
                 .pattern("BBB")
@@ -180,6 +173,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ASH)
                 .unlockedBy("",has(ASH))
                 .save(recipeOutput,"charcoal_pit:fertilizer_flesh");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ItemRegistry.FERTILIZER.get(),4)
+                .requires(DUST_NITER)
+                .requires(Items.BONE_MEAL)
+                .requires(Items.ROTTEN_FLESH)
+                .requires(Items.ROTTEN_FLESH)
+                .unlockedBy("",has(DUST_NITER))
+                .save(recipeOutput,"charcoal_pit:fertilizer_niter");
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ItemRegistry.RAW_TIN.get())
                 .requires(ItemRegistry.RAW_TIN_NUGGET)
                 .requires(ItemRegistry.RAW_TIN_NUGGET)
@@ -192,8 +192,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(recipeOutput,List.of(ItemRegistry.RAW_TIN.get()),RecipeCategory.MISC,ItemRegistry.TIN.get(),0.7F,100,"tin");
         oreSmelting(recipeOutput,List.of(ItemRegistry.ORE_TIN.get()),RecipeCategory.MISC,ItemRegistry.TIN.get(),0.7F,200,"tin");
         oreBlasting(recipeOutput,List.of(ItemRegistry.ORE_TIN.get()),RecipeCategory.MISC,ItemRegistry.TIN.get(),0.7F,100,"tin");
-        oreSmelting(recipeOutput,List.of(ItemRegistry.PIG_IRON.get()),RecipeCategory.MISC,Items.IRON_INGOT,0.7F,200,"steel");
-        oreBlasting(recipeOutput,List.of(ItemRegistry.PIG_IRON.get()),RecipeCategory.MISC,ItemRegistry.STEEL.get(),0.7F,200,"steel");
+        oreSmelting(recipeOutput,List.of(ItemRegistry.TIN_DUST.get()),RecipeCategory.MISC,ItemRegistry.TIN.get(),0.1F,200,"tin");
+        oreBlasting(recipeOutput,List.of(ItemRegistry.TIN_DUST.get()),RecipeCategory.MISC,ItemRegistry.TIN.get(),0.1F,100,"tin");
+        oreBlasting(recipeOutput,List.of(ItemRegistry.PIG_IRON.get()),RecipeCategory.MISC,Items.IRON_INGOT,0.7F,200,"steel");
+
+        makeCompressionRecipe(recipeOutput, ItemRegistry.RAW_CHALCOCITE.get(), ItemRegistry.RAW_CHALCOCITE_BLOCK.get());
+        oreSmelting(recipeOutput,List.of(ItemRegistry.RAW_CHALCOCITE.get()),RecipeCategory.MISC,Items.COPPER_INGOT,0.7F,200,"copper");
+        oreBlasting(recipeOutput,List.of(ItemRegistry.RAW_CHALCOCITE.get()),RecipeCategory.MISC,Items.COPPER_INGOT,0.7F,100,"copper");
+        oreSmelting(recipeOutput,List.of(ItemRegistry.ORE_CHALCOCITE.get()),RecipeCategory.MISC,Items.COPPER_INGOT,0.7F,200,"copper");
+        oreBlasting(recipeOutput,List.of(ItemRegistry.ORE_CHALCOCITE.get()),RecipeCategory.MISC,Items.COPPER_INGOT,0.7F,100,"copper");
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ItemRegistry.CLAY_MOLD.get(),2)
                 .pattern("C C")
                 .pattern("CCC")
@@ -253,6 +260,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.SUNFLOWER)
                 .unlockedBy("",has(Items.SUNFLOWER))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,Items.BLACK_DYE, 2)
+                .requires(ItemRegistry.GREEN_VITRIOL)
+                .requires(Items.OAK_SAPLING)
+                .requires(Items.OAK_SAPLING)
+                .requires(Items.OAK_SAPLING)
+                .requires(Items.OAK_SAPLING)
+                .unlockedBy("",has(ItemRegistry.GREEN_VITRIOL))
+                .save(recipeOutput,"charcoal_pit:gall_ink");
         //
         oreSmelting(recipeOutput,List.of(ItemRegistry.FLOUR.get()),RecipeCategory.FOOD,Items.BREAD,0.35F,200,"four");
         oreBaking(recipeOutput,List.of(ItemRegistry.FLOUR.get()),RecipeCategory.FOOD,Items.BREAD,0.35F,100,"four");
@@ -300,14 +315,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(SUNFLOWER_SEEDS)
                 .requires(Items.BOWL)
                 .unlockedBy("",has(SUNFLOWER_SEEDS))
-                .save(recipeOutput);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,ItemRegistry.CHOCOLATE_POWDER)
-                .requires(Items.SUGAR)
-                .requires(Items.COCOA_BEANS)
-                .requires(Items.COCOA_BEANS)
-                .requires(Items.COCOA_BEANS)
-                .requires(Items.COCOA_BEANS)
-                .unlockedBy("",has(Items.COCOA_BEANS))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,ItemRegistry.CROISSANT,2)
                 .requires(ItemRegistry.FLOUR)
@@ -402,6 +409,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         makeCompressionRecipe(recipeOutput,ItemRegistry.BRONZE.get(),ItemRegistry.BRONZE_BLOCK.get());
         makeCompressionRecipe(recipeOutput,ItemRegistry.STEEL.get(),ItemRegistry.STEEL_BLOCK.get());
         makeCompressionRecipe(recipeOutput,ItemRegistry.TIN.get(),ItemRegistry.TIN_BLOCK.get());
+        makeCompressionRecipe(recipeOutput,ItemRegistry.ALUMINIUM.get(),ItemRegistry.ALUMINIUM_BLOCK.get());
+        makeCompressionRecipe(recipeOutput,ItemRegistry.ALUMITE.get(),ItemRegistry.ALUMITE_BLOCK.get());
+        makeCompressionRecipe(recipeOutput,ItemRegistry.PLATINUM.get(),ItemRegistry.PLATINUM_BLOCK.get());
+        makeCompressionRecipe(recipeOutput,ItemRegistry.ENDERIUM.get(),ItemRegistry.ENDERIUM_BLOCK.get());
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ItemRegistry.ENDERIUM_DUST, 4)
+                .requires(ItemRegistry.TIN_DUST)
+                .requires(ItemRegistry.TIN_DUST)
+                .requires(ItemRegistry.TIN_DUST)
+                .requires(ItemRegistry.PLATINUM_DUST)
+                .requires(ItemRegistry.RESONANT_BOTTLE)
+                .requires(ItemRegistry.RESONANT_BOTTLE)
+                .requires(ItemRegistry.RESONANT_BOTTLE)
+                .requires(ItemRegistry.RESONANT_BOTTLE)
+                .unlockedBy("",has(ItemRegistry.PLATINUM))
+                .save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.TORCH,8)
                 .pattern("C")
                 .pattern("S")
@@ -418,18 +442,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Items.STICK)
                 .unlockedBy("",has(ItemRegistry.COKE.get()))
                 .save(recipeOutput,"charcoal_pit:coke_soul_torch");
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ItemRegistry.LOG_PILE.get())
-                .requires(ItemTags.LOGS_THAT_BURN)
-                .requires(ItemTags.LOGS_THAT_BURN)
-                .requires(ItemTags.LOGS_THAT_BURN)
-                .requires(ItemTags.LOGS_THAT_BURN)
-                .requires(ItemTags.LOGS_THAT_BURN)
-                .requires(ItemTags.LOGS_THAT_BURN)
-                .requires(ItemTags.LOGS_THAT_BURN)
-                .requires(ItemTags.LOGS_THAT_BURN)
-                .requires(ItemTags.LOGS_THAT_BURN)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemRegistry.LOG_PILE.get())
+                .pattern("L ")
+                .pattern("LL")
+                .pattern(" L")
+                .define('L', ItemTags.LOGS_THAT_BURN)
                 .unlockedBy("",has(ItemTags.LOGS_THAT_BURN))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemRegistry.LOG_PILE.get())
+                .pattern("LL ")
+                .pattern(" LL")
+                .define('L', ItemTags.LOGS_THAT_BURN)
+                .unlockedBy("",has(ItemTags.LOGS_THAT_BURN))
+                .save(recipeOutput,"charcoal_pit:log_pile_2");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ItemRegistry.LOG_PILE)
+                .requires(ItemTags.BAMBOO_BLOCKS)
+                .requires(ItemTags.BAMBOO_BLOCKS)
+                .requires(ItemTags.BAMBOO_BLOCKS)
+                .requires(ItemTags.BAMBOO_BLOCKS)
+                .requires(ItemTags.BAMBOO_BLOCKS)
+                .requires(ItemTags.BAMBOO_BLOCKS)
+                .requires(ItemTags.BAMBOO_BLOCKS)
+                .requires(ItemTags.BAMBOO_BLOCKS)
+                .unlockedBy("",has(ItemTags.BAMBOO_BLOCKS))
+                .save(recipeOutput, "charcoal_pit:log_pile_3");
         makeCompressionRecipe(recipeOutput,ItemRegistry.ASH.get(),ItemRegistry.ASH_BLOCK.get());
         oreCamping(recipeOutput,List.of(Items.STICK),RecipeCategory.TOOLS, Items.TORCH,0.0F,200,"torch");
         //WOOD TOOLS
@@ -508,7 +544,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("",has(ItemRegistry.DWARVEN_CANDLE.get()))
                 .save(recipeOutput);
         //COPPER TOOLS
-        makeToolRecipes(recipeOutput, Tags.Items.INGOTS_COPPER,ItemRegistry.COPPER_PICK.get(),ItemRegistry.COPPER_SHOVEL.get(),ItemRegistry.COPPER_AXE.get(),ItemRegistry.COPPER_SWORD.get(),ItemRegistry.COPPER_HOE.get(),null);
+        makeToolAndArmorRecipes(recipeOutput, Tags.Items.INGOTS_COPPER,ItemRegistry.COPPER_PICK.get(),ItemRegistry.COPPER_SHOVEL.get(),ItemRegistry.COPPER_AXE.get(),ItemRegistry.COPPER_SWORD.get(),ItemRegistry.COPPER_HOE.get(),null,
+                ItemRegistry.COPPER_HELMET.get(),ItemRegistry.COPPER_CHESTPLATE.get(),ItemRegistry.COPPER_LEGGINGS.get(),ItemRegistry.COPPER_BOOTS.get());
         //BRONZE TOOLS
         makeToolAndArmorRecipes(recipeOutput, BRONZE,ItemRegistry.BRONZE_PICK.get(),ItemRegistry.BRONZE_SHOVEL.get(),ItemRegistry.BRONZE_AXE.get(),ItemRegistry.BRONZE_SWORD.get(),ItemRegistry.BRONZE_HOE.get(),ItemRegistry.BRONZE_KNIFE.get(),
                 ItemRegistry.BRONZE_HELMET.get(),ItemRegistry.BRONZE_CHESTPLATE.get(),ItemRegistry.BRONZE_LEGGINGS.get(),ItemRegistry.BRONZE_BOOTS.get());
@@ -539,6 +576,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ItemRegistry.SMALL_GUNPOWDER.get())
                 .unlockedBy("",has(Items.GUNPOWDER))
                 .save(recipeOutput,"charcoal_pit:repack_gunpowder");
+        //ALUMITE TOOLS
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ItemRegistry.ALUMINIUM_KNIFE)
+                .pattern("I")
+                .pattern("S")
+                .define('I', ItemRegistry.ALUMINIUM)
+                .define('S', Items.STICK)
+                .unlockedBy("", has(ItemRegistry.ALUMINIUM))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ItemRegistry.PLATINUM_KNIFE)
+                .pattern("I")
+                .pattern("S")
+                .define('I', ItemRegistry.PLATINUM)
+                .define('S', Items.STICK)
+                .unlockedBy("", has(ItemRegistry.PLATINUM))
+                .save(recipeOutput);
+        makeToolAndArmorRecipes(recipeOutput, ALUMITE, ItemRegistry.ALUMITE_PICK.get(),ItemRegistry.ALUMITE_SHOVEL.get(),ItemRegistry.ALUMITE_AXE.get(),ItemRegistry.ALUMITE_SWORD.get(),ItemRegistry.ALUMITE_HOE.get(),null,
+                ItemRegistry.ALUMITE_HELMET.get(),ItemRegistry.ALUMITE_CHESTPLATE.get(),ItemRegistry.ALUMITE_LEGGINGS.get(),ItemRegistry.ALUMITE_BOOTS.get());
     }
 
     public void makeBronzeAlternatives(RecipeOutput output){
@@ -644,14 +698,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("",has(Items.RAW_IRON))
                 .save(output,"charcoal_pit:ore_and_flint");
         ItemStack steel_and_flint=new ItemStack(Items.FLINT_AND_STEEL);
-        steel_and_flint.set(DataComponents.MAX_DAMAGE,375);
+        steel_and_flint.set(DataComponents.MAX_DAMAGE, ToolTiers.STEEL.getUses());
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS,steel_and_flint)
                 .requires(STEEL)
                 .requires(Items.FLINT)
                 .unlockedBy("",has(STEEL))
                 .save(output,"charcoal_pit:steel_and_flint");
         ItemStack steel_shears=new ItemStack(Items.SHEARS);
-        steel_shears.set(DataComponents.MAX_DAMAGE,375);
+        steel_shears.set(DataComponents.MAX_DAMAGE,ToolTiers.STEEL.getUses());
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, steel_shears)
                 .pattern(" I")
                 .pattern("I ")

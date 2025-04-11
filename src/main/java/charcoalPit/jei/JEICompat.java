@@ -36,6 +36,7 @@ public class JEICompat implements IModPlugin {
         registration.addRecipeCategories(new CrusherRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new StillRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new QuernRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new CokingRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -49,6 +50,7 @@ public class JEICompat implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(ItemRegistry.PRESS.get()),CrusherRecipeCategory.CRUHSER);
         registration.addRecipeCatalyst(new ItemStack(ItemRegistry.STILL.get()),StillRecipeCategory.STILL);
         registration.addRecipeCatalyst(new ItemStack(ItemRegistry.QUERN.get()),QuernRecipeCategory.QUERN);
+        registration.addRecipeCatalyst(new ItemStack(ItemRegistry.COKE_OVEN.get()),CokingRecipeCategory.COKING);
     }
 
     @Override
@@ -59,6 +61,7 @@ public class JEICompat implements IModPlugin {
         registration.addRecipes(CrusherRecipeCategory.CRUHSER,Minecraft.getInstance().level.getRecipeManager().getAllRecipesFor(RecipeRegistry.CRUSHER_RECIPE.get()));
         registration.addRecipes(StillRecipeCategory.STILL,Minecraft.getInstance().level.getRecipeManager().getAllRecipesFor(RecipeRegistry.STILL_RECIPE.get()));
         registration.addRecipes(QuernRecipeCategory.QUERN,Minecraft.getInstance().level.getRecipeManager().getAllRecipesFor(RecipeRegistry.QUERN_RECIPE.get()));
+        registration.addRecipes(CokingRecipeCategory.COKING,Minecraft.getInstance().level.getRecipeManager().getAllRecipesFor(RecipeRegistry.COKING_RECIPE.get()));
 
         registration.addIngredientInfo(List.of(new ItemStack(ItemRegistry.LOG_PILE.get()),new ItemStack(Items.CHARCOAL),new ItemStack(Items.COAL_BLOCK),new ItemStack(ItemRegistry.COKE.get())),
                 VanillaTypes.ITEM_STACK, Component.translatable("charcoal_pit.instruction.build_pit"));
@@ -74,5 +77,6 @@ public class JEICompat implements IModPlugin {
         registration.addRecipeClickArea(BarrelScreen.class,98,35,16,16,BarrelRecipeCategory.BARREL);
         registration.addRecipeClickArea(PressScreen.class,65,19,16,12,CrusherRecipeCategory.CRUHSER);
         registration.addRecipeClickArea(StillScreen.class,124,22,9,29,StillRecipeCategory.STILL);
+        registration.addRecipeClickArea(CokeOvenScreen.class,71,23,14,14,CokingRecipeCategory.COKING);
     }
 }

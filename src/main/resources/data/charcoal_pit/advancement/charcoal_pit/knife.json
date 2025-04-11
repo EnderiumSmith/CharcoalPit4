@@ -1,0 +1,38 @@
+{
+  "parent": "charcoal_pit:charcoal_pit/platinum",
+  "display": {
+    "icon": {
+      "id": "charcoal_pit:platinum_knife"
+    },
+    "title": {
+      "translate": "advancements.charcoal_pit.knife.title"
+    },
+    "description": {
+      "translate": "advancements.charcoal_pit.knife.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 500
+  },
+  "criteria": {
+    "item1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:platinum_knife"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item1"
+    ]
+  ]
+}

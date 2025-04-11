@@ -1,0 +1,16 @@
+{
+  "type": "charcoal_pit:hot_blasting",
+  "temperature": 2169,
+  "cooking_time": 400,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "charcoal_pit:quicklime"
+  },
+  "flux": {
+    "item": "charcoal_pit:coke_powder"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:calcium_carbide"
+  }
+}

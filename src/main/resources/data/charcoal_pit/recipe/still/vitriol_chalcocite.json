@@ -1,0 +1,23 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "amount_in": 100,
+  "item_in": {
+    "item": "charcoal_pit:raw_chalcocite"
+  },
+  "catalyst": {
+    "tag": "c:dusts/niter"
+  },
+  "chance": 0.025,
+  "fluid_out": {
+    "fluid": "charcoal_pit:oil_of_vitriol"
+  },
+  "amount_out": 50,
+  "item_out": {
+    "item": "minecraft:copper_ingot"
+  },
+  "xp": 0.7,
+  "process_time": 200
+}

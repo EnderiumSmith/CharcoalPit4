@@ -1,0 +1,12 @@
+{
+  "type": "charcoal_pit:quern",
+  "category": "misc",
+  "group": "quern",
+  "ingredient": {
+    "item": "charcoal_pit:coke"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:coke_powder"
+  }
+}

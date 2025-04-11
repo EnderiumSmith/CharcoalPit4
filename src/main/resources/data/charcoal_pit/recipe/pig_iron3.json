@@ -1,7 +1,7 @@
 {
   "type": "charcoal_pit:hot_blasting",
   "temperature": 1438,
-  "cooking_time": 200,
+  "cooking_time": 1600,
   "experience": 0.1,
   "ingredient": {
     "tag": "c:ingots/iron"
@@ -11,6 +11,6 @@
   },
   "result": {
     "count": 1,
-    "id": "charcoal_pit:alloy_pig_iron"
+    "id": "charcoal_pit:alloy_steel"
   }
 }

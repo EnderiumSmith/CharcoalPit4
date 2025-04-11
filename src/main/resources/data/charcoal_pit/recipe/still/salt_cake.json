@@ -1,0 +1,18 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "tag": "c:sulfuric_acid"
+  },
+  "fluid_out": {
+    "fluid": "charcoal_pit:muriatic_acid"
+  },
+  "amount_out": 8000,
+  "amount_in": 50,
+  "item_in": {
+    "tag": "c:dusts/salt"
+  },
+  "item_out": {
+    "item": "charcoal_pit:salt_cake"
+  },
+  "process_time": 100
+}

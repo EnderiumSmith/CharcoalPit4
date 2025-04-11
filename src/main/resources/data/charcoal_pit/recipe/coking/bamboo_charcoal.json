@@ -1,0 +1,14 @@
+{
+  "type": "charcoal_pit:coking",
+  "category": "misc",
+  "group": "coke",
+  "ingredient": {
+    "tag": "minecraft:bamboo_blocks"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:bamboo_charcoal"
+  },
+  "cookingtime": 450,
+  "experience": 25
+}

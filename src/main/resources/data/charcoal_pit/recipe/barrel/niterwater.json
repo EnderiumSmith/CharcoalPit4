@@ -1,0 +1,21 @@
+{
+  "type": "charcoal_pit:barrel",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "amount_in": 500,
+  "item_in": {
+    "item": "minecraft:gunpowder"
+  },
+  "item_amount": 4,
+  "fluid_out": {
+    "fluid": "charcoal_pit:niterwater"
+  },
+  "amount_out": 500,
+  "item_out": {
+    "count": 1,
+    "id": "charcoal_pit:sulfur"
+  },
+  "void_fluid": true,
+  "process_time": 1000
+}

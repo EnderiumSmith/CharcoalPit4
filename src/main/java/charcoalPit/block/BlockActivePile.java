@@ -1,14 +1,10 @@
 package charcoalPit.block;
 
-import charcoalPit.core.BlockRegistry;
 import charcoalPit.core.ModTags;
-import charcoalPit.fluid.FluidRegistry;
-import charcoalPit.tile.TileCreosoteFunnel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -18,7 +14,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.BaseFireBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -26,8 +21,6 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 
 public class BlockActivePile extends Block {
 
@@ -108,17 +101,6 @@ public class BlockActivePile extends Block {
                     }
                 }
             }
-            /*for(BlockPos mutable:BlockPos.MutableBlockPos.betweenClosed(pos.below().north().west(),pos.above().south().east())){
-                BlockState nextState=level.getBlockState(mutable);
-                if(nextState.getBlock()==this){
-                    int stage2=nextState.getValue(AGE);
-                    if(stage2<stage){
-                        //cant progress if nearby blocks are still behind
-                        return;
-                    }
-                }
-            }*/
-            diffuseCreosote(pos, level, state.getBlock()==BlockRegistry.ACTIVE_LOG_PILE.get()?75:150);
             if(stage<5){
                 level.setBlock(pos,state.setValue(AGE,stage+1),2);
             }else{
@@ -127,7 +109,7 @@ public class BlockActivePile extends Block {
         }
     }
 
-    public void diffuseCreosote(BlockPos pos, Level level, int amount){
+    /*public void diffuseCreosote(BlockPos pos, Level level, int amount){
         BlockPos.MutableBlockPos newPos=pos.above().mutable();
         BlockState state=level.getBlockState(newPos);
         while(state.getBlock() instanceof BlockActivePile || state.getBlock() instanceof BlockAsh){
@@ -181,7 +163,7 @@ public class BlockActivePile extends Block {
     public int fillCreosote(BlockPos pos,Level level, int amount){
         TileCreosoteFunnel tile=((TileCreosoteFunnel) level.getBlockEntity(pos));
         return tile.tank.fill(new FluidStack(FluidRegistry.CREOSOTE.source,amount), IFluidHandler.FluidAction.EXECUTE);
-    }
+    }*/
 
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {

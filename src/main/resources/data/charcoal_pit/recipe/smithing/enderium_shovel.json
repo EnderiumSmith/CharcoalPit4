@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "charcoal_pit:alloy_enderium"
+  },
+  "base": {
+    "item": "charcoal_pit:alumite_shovel"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:enderium_shovel"
+  },
+  "template": {
+    "item": "minecraft:blaze_powder"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "charcoal_pit:alloy_mold",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:ingots/sodium"
+    },
+    {
+      "tag": "c:ingots/sodium"
+    },
+    {
+      "tag": "c:ingots/sodium"
+    },
+    {
+      "item": "charcoal_pit:aluminium_chloride"
+    },
+    {
+      "item": "charcoal_pit:alloy_mold"
+    }
+  ],
+  "result": {
+    "item": "charcoal_pit:ingot_aluminium"
+  },
+  "count": 1
+}

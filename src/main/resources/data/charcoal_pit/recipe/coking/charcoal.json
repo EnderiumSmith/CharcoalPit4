@@ -1,0 +1,14 @@
+{
+  "type": "charcoal_pit:coking",
+  "category": "misc",
+  "group": "coke",
+  "ingredient": {
+    "tag": "minecraft:logs_that_burn"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:charcoal"
+  },
+  "cookingtime": 900,
+  "experience": 50
+}

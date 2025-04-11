@@ -45,7 +45,7 @@ public class BlockMechanicalBellows extends BlockBellows{
             if(getNeighborSignal(level,state,pos)){
                 level.setBlockAndUpdate(pos,state.setValue(POWERED,true));
                 level.scheduleTick(pos,this,20);
-                level.playSound(null, pos, SoundEvents.LAVA_EXTINGUISH, SoundSource.BLOCKS,1F,1F);
+                level.playSound(null, pos, SoundEvents.LAVA_EXTINGUISH, SoundSource.BLOCKS,0.9F,1F);
             }
         }
     }

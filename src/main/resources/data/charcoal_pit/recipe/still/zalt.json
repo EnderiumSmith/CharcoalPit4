@@ -1,0 +1,14 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "amount_in": 2500,
+  "item_in": {
+    "item": "minecraft:kelp"
+  },
+  "item_out": {
+    "item": "charcoal_pit:salt"
+  },
+  "process_time": 500
+}

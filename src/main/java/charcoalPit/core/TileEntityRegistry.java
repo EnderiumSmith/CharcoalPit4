@@ -21,14 +21,8 @@ public class TileEntityRegistry {
             ()->BlockEntityType.Builder.of(TileBlastFurnace::new,BlockRegistry.BLAST_FURNACE.get()).build(null));
     public static final Supplier<BlockEntityType<TileBarrel>> BARREL=TILE_ENTITIES.register("barrel",
             ()->BlockEntityType.Builder.of(TileBarrel::new,BlockRegistry.BARREL.get()).build(null));
-    public static final Supplier<BlockEntityType<TileCreosoteFunnel>> CREOSOTE_FUNNEL=TILE_ENTITIES.register("creosote_funnel",
-            ()->BlockEntityType.Builder.of(TileCreosoteFunnel::new,BlockRegistry.CREOSOTE_FUNNEL_BRICK.get(),BlockRegistry.CREOSOTE_FUNNEL_SANDY.get(),BlockRegistry.CREOSOTE_FUNNEL_NETHER.get()).build(null));
     public static final Supplier<BlockEntityType<TIleStill>> STILL=TILE_ENTITIES.register("still",
             ()->BlockEntityType.Builder.of(TIleStill::new,BlockRegistry.STILL.get()).build(null));
-    /*public static final Supplier<BlockEntityType<TileCrusher>> CRUSHER=TILE_ENTITIES.register("crusher",
-            ()->BlockEntityType.Builder.of(TileCrusher::new,BlockRegistry.CRUSHER.get()).build(null));
-    public static final Supplier<BlockEntityType<TileGenerator>> GENERATOR=TILE_ENTITIES.register("generator",
-            ()->BlockEntityType.Builder.of(TileGenerator::new,BlockRegistry.GENERATOR.get()).build(null));*/
     public static final Supplier<BlockEntityType<TilePress>> PRESS=TILE_ENTITIES.register("press",
             ()->BlockEntityType.Builder.of(TilePress::new, BlockRegistry.PRESS.get()).build(null));
     public static final Supplier<BlockEntityType<TileQuern>> QUERN=TILE_ENTITIES.register("quern",
@@ -42,6 +36,8 @@ public class TileEntityRegistry {
             ()->BlockEntityType.Builder.of(TileNestingBox::new, BlockRegistry.NEST_BOX.get()).build(null));
     public static final Supplier<BlockEntityType<TileFeedingThrough>> FEEDING_THROUGH=TILE_ENTITIES.register("feeding_through",
             ()->BlockEntityType.Builder.of(TileFeedingThrough::new,BlockRegistry.FEEDING_THROUGH.get()).build(null));
+    public static final Supplier<BlockEntityType<TileCokeOven>> COKE_OVEN=TILE_ENTITIES.register("coke_oven",
+            ()->BlockEntityType.Builder.of(TileCokeOven::new, BlockRegistry.COKE_OVEN.get()).build(null));
 
 
 }

@@ -8,8 +8,8 @@
     "item": "minecraft:chicken"
   },
   "item_out": {
-    "count": 1,
-    "id": "charcoal_pit:ingot_chicken"
+    "item": "charcoal_pit:ingot_chicken"
   },
+  "xp": 0.35,
   "process_time": 200
 }

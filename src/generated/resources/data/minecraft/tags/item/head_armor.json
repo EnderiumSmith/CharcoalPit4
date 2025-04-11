@@ -1,6 +1,8 @@
 {
   "values": [
     "charcoal_pit:bronze_helmet",
-    "charcoal_pit:steel_helmet"
+    "charcoal_pit:steel_helmet",
+    "charcoal_pit:alumite_helmet",
+    "charcoal_pit:enderium_helmet"
   ]
 }

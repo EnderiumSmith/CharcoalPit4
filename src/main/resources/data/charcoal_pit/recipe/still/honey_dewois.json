@@ -1,0 +1,18 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "charcoal_pit:alcohol"
+  },
+  "amount_in": 500,
+  "item_in": {
+    "item": "minecraft:glow_lichen"
+  },
+  "item_amount": 4,
+  "catalyst": {
+    "item": "minecraft:glass_bottle"
+  },
+  "item_out": {
+    "item": "charcoal_pit:honey_dewois"
+  },
+  "process_time": 200
+}

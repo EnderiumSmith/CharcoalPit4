@@ -26,7 +26,7 @@ public class ModPotions {
             ()->new Potion(new MobEffectInstance(MobEffects.HEALTH_BOOST,20*90,1),new MobEffectInstance(MobEffects.REGENERATION,200,1)));
 
     public static final DeferredHolder<Potion,Potion> ABSORPTION=POTIONS.register("charcoalpit_absorption",
-            ()->new Potion(new MobEffectInstance(MobEffects.ABSORPTION,20*60*3,4)));
+            ()->new Potion(new MobEffectInstance(MobEffects.ABSORPTION,20*60*3,1)));
     public static final DeferredHolder<Potion,Potion> ABSORPTION_EXTENDED=POTIONS.register("charcoalpit_absorption_extended",
-            ()->new Potion(new MobEffectInstance(MobEffects.ABSORPTION,20*60*8,4)));
+            ()->new Potion(new MobEffectInstance(MobEffects.ABSORPTION,20*60*8,1)));
 }

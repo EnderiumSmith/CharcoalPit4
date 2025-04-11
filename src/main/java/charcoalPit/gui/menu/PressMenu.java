@@ -134,7 +134,7 @@ public class PressMenu extends AbstractContainerMenu {
             ItemStack itemstack1 = slot.getItem();
             itemstack = itemstack1.copy();
             if (index < SLOTS) {
-                if (!this.moveItemStackTo(itemstack1, SLOTS, 35+SLOTS, true)) {
+                if (!this.moveItemStackTo(itemstack1, SLOTS, 36+SLOTS, true)) {
                     return ItemStack.EMPTY;
                 }
             } else if (!this.moveItemStackTo(itemstack1, 0, SLOTS, false)) {

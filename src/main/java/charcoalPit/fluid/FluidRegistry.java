@@ -25,7 +25,12 @@ public class FluidRegistry {
     public static final TankOnlyFluid LIMEWATER=new TankOnlyFluid("limewater", FluidType.Properties.create().sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.BUCKET_FILL,SoundEvents.BUCKET_FILL));
     public static final TankOnlyFluid SEED_OIL=new TankOnlyFluid("seed_oil", FluidType.Properties.create().density(920).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.BUCKET_FILL,SoundEvents.BUCKET_FILL));
     public static final TankOnlyFluid BIODIESEL=new TankOnlyFluid("biodiesel", FluidType.Properties.create().density(880).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.BUCKET_FILL,SoundEvents.BUCKET_FILL));
-    //public static final TankOnlyFluid HONEY_DEWOIS=new TankOnlyFluid("honey_dewois", FluidType.Properties.create().sound(SoundActions.BUCKET_EMPTY,SoundEvents.BUCKET_EMPTY).sound(SoundActions.BUCKET_FILL,SoundEvents.BUCKET_FILL));
+    public static final TankOnlyFluid OIL_OF_VITRIOL=new TankOnlyFluid("oil_of_vitriol",FluidType.Properties.create().density(1830).viscosity(26000).sound(SoundActions.BUCKET_EMPTY,SoundEvents.BUCKET_EMPTY).sound(SoundActions.BUCKET_FILL,SoundEvents.BUCKET_FILL));
+    public static final TankOnlyFluid HYDROGEN_SULFIDE=new TankOnlyFluid("hydrogen_sulfide",FluidType.Properties.create().density(15).viscosity(1).canSwim(false).canPushEntity(false).fallDistanceModifier(1F).sound(SoundActions.BUCKET_EMPTY,SoundEvents.BUCKET_EMPTY).sound(SoundActions.BUCKET_FILL,SoundEvents.BUCKET_FILL));
+    public static final TankOnlyFluid MURIATIC_ACID=new TankOnlyFluid("muriatic_acid",FluidType.Properties.create().density(15).viscosity(1).sound(SoundActions.BUCKET_EMPTY,SoundEvents.BUCKET_EMPTY).sound(SoundActions.BUCKET_FILL,SoundEvents.BUCKET_FILL));
+    public static final TankOnlyFluid CHLORINE=new TankOnlyFluid("chlorine",FluidType.Properties.create().density(32).viscosity(1).canSwim(false).canPushEntity(false).fallDistanceModifier(1F).sound(SoundActions.BUCKET_EMPTY,SoundEvents.BUCKET_EMPTY).sound(SoundActions.BUCKET_FILL,SoundEvents.BUCKET_FILL));
+    public static final TankOnlyFluid ACETYLENE=new TankOnlyFluid("acetylene",FluidType.Properties.create().density(-11).viscosity(1).sound(SoundActions.BUCKET_EMPTY,SoundEvents.BUCKET_EMPTY).sound(SoundActions.BUCKET_FILL,SoundEvents.BUCKET_FILL));
+    public static final TankOnlyFluid NITERWATER=new TankOnlyFluid("niterwater",FluidType.Properties.create().sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.BUCKET_FILL,SoundEvents.BUCKET_FILL));
 
 
 

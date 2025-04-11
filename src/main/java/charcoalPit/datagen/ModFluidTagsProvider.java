@@ -6,7 +6,8 @@ import charcoalPit.fluid.FluidRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.FluidTagsProvider;
-import net.minecraft.resources.ResourceLocation;
+
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -27,5 +28,11 @@ public class ModFluidTagsProvider extends FluidTagsProvider {
                 .add(FluidRegistry.SEED_OIL.source.get());
         tag(ModTags.ETHANOL)
                 .add(FluidRegistry.ETHANOL.source.get());
+        tag(ModTags.SULFURIC_ACID)
+                .add(FluidRegistry.OIL_OF_VITRIOL.source.get());
+        tag(ModTags.CHLORINE)
+                .add(FluidRegistry.CHLORINE.source.get());
+        tag(Tags.Fluids.GASEOUS)
+                .add(FluidRegistry.HYDROGEN_SULFIDE.source.get(),FluidRegistry.MURIATIC_ACID.source.get(),FluidRegistry.CHLORINE.source.get(),FluidRegistry.ACETYLENE.source.get());
     }
 }

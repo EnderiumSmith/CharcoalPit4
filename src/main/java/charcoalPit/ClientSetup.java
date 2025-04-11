@@ -25,7 +25,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Fluids;
+
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -36,8 +36,6 @@ import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
-import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
-import net.neoforged.neoforge.fluids.FluidType;
 import org.jetbrains.annotations.Nullable;
 
 @EventBusSubscriber(value = Dist.CLIENT,modid = CharcoalPit.MODID, bus = EventBusSubscriber.Bus.MOD)
@@ -52,6 +50,7 @@ public class ClientSetup {
         event.register(MenuTypeRegistry.PRESS.get(), PressScreen::new);
         //event.register(MenuTypeRegistry.CRUSHER.get(), CrusherScreen::new);
         event.register(MenuTypeRegistry.CERAMIC_POT.get(), CeramicPotScreen::new);
+        event.register(MenuTypeRegistry.COKE_OVEN.get(), CokeOvenScreen::new);
     }
 
     @SubscribeEvent
@@ -73,6 +72,11 @@ public class ClientSetup {
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.AMARANTH_SAPLING.get(), RenderType.CUTOUT);
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.AMARANTH_LEAVES.get(), RenderType.CUTOUT);
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.STRAWBERRY_BUSH.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.COKE_OVEN.get(), RenderType.CUTOUT);
+        /*ItemBlockRenderTypes.setRenderLayer(FluidRegistry.HYDROGEN_SULFIDE.source.get(), RenderType.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(FluidRegistry.HYDROGEN_SULFIDE.flowing.get(), RenderType.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(FluidRegistry.CHLORINE.source.get(), RenderType.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(FluidRegistry.CHLORINE.flowing.get(), RenderType.TRANSLUCENT);*/
         ItemProperties.register(ItemRegistry.JAVELIN.get(), ResourceLocation.parse("throwing"), new ClampedItemPropertyFunction() {
             @Override
             public float unclampedCall(ItemStack stack, @Nullable ClientLevel level, @Nullable LivingEntity entity, int seed) {
@@ -212,6 +216,10 @@ public class ClientSetup {
     public static final ResourceLocation waterSource=ResourceLocation.fromNamespaceAndPath("minecraft","block/water_still");
     public static final ResourceLocation waterFlowing=ResourceLocation.fromNamespaceAndPath("minecraft","block/water_flow");
 
+    public static final ResourceLocation gasSource=ResourceLocation.fromNamespaceAndPath(CharcoalPit.MODID,"block/gas_still");
+    public static final ResourceLocation gasFlowing=ResourceLocation.fromNamespaceAndPath(CharcoalPit.MODID,"block/gas_flow");
+    public static final ResourceLocation acidSource=ResourceLocation.fromNamespaceAndPath(CharcoalPit.MODID,"block/acid_still");
+
     @SubscribeEvent
     public static void fluidTextures(RegisterClientExtensionsEvent event){
         event.registerFluidType(new IClientFluidTypeExtensions() {
@@ -326,6 +334,102 @@ public class ClientSetup {
                 return waterFlowing;
             }
         }, FluidRegistry.BIODIESEL.fluidType.get());
+        event.registerFluidType(new IClientFluidTypeExtensions() {
+            @Override
+            public int getTintColor() {
+                return 0xFFFFD52A;//0xFFFFBF00
+            }
+
+            @Override
+            public ResourceLocation getStillTexture() {
+                return acidSource;
+            }
+
+            @Override
+            public ResourceLocation getFlowingTexture() {
+                return waterFlowing;
+            }
+        }, FluidRegistry.OIL_OF_VITRIOL.fluidType.get());
+        event.registerFluidType(new IClientFluidTypeExtensions() {
+            @Override
+            public int getTintColor() {
+                return 0xFFFEF65B;
+            }
+
+            @Override
+            public ResourceLocation getStillTexture() {
+                return gasSource;
+            }
+
+            @Override
+            public ResourceLocation getFlowingTexture() {
+                return gasFlowing;
+            }
+        }, FluidRegistry.HYDROGEN_SULFIDE.fluidType.get());
+        event.registerFluidType(new IClientFluidTypeExtensions() {
+            @Override
+            public int getTintColor() {
+                return 0xFF8aff00;
+            }
+
+            @Override
+            public ResourceLocation getStillTexture() {
+                return acidSource;
+            }
+
+            @Override
+            public ResourceLocation getFlowingTexture() {
+                return gasFlowing;
+            }
+        }, FluidRegistry.MURIATIC_ACID.fluidType.get());
+        event.registerFluidType(new IClientFluidTypeExtensions() {
+            @Override
+            public int getTintColor() {
+                return 0xFF78B842;
+            }
+
+            @Override
+            public ResourceLocation getStillTexture() {
+                return gasSource;
+            }
+
+            @Override
+            public ResourceLocation getFlowingTexture() {
+                return gasFlowing;
+            }
+        }, FluidRegistry.CHLORINE.fluidType.get());
+        event.registerFluidType(new IClientFluidTypeExtensions() {
+            @Override
+            public int getTintColor() {
+                return 0xFF808080;
+            }
+
+            @Override
+            public ResourceLocation getStillTexture() {
+                return gasSource;
+            }
+
+            @Override
+            public ResourceLocation getFlowingTexture() {
+                return gasFlowing;
+            }
+        }, FluidRegistry.ACETYLENE.fluidType.get());
+        event.registerFluidType(new IClientFluidTypeExtensions() {
+            @Override
+            public int getTintColor() {
+                return 0xFFC7B6B6;
+            }
+
+            @Override
+            public ResourceLocation getStillTexture() {
+                return waterSource;
+            }
+
+            @Override
+            public ResourceLocation getFlowingTexture() {
+                return waterFlowing;
+            }
+        }, FluidRegistry.NITERWATER.fluidType.get());
     }
 
     @SubscribeEvent

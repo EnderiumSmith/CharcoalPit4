@@ -1,6 +1,8 @@
 {
   "values": [
     "charcoal_pit:bronze_chestplate",
-    "charcoal_pit:steel_chestplate"
+    "charcoal_pit:steel_chestplate",
+    "charcoal_pit:alumite_chestplate",
+    "charcoal_pit:enderium_chestplate"
   ]
 }

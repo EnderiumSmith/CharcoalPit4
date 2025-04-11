@@ -1,0 +1,35 @@
+{
+  "parent": "charcoal_pit:charcoal_pit/tuyere",
+  "display": {
+    "icon": {
+      "id": "charcoal_pit:ingot_platinum"
+    },
+    "title": {
+      "translate": "advancements.charcoal_pit.platinum.title"
+    },
+    "description": {
+      "translate": "advancements.charcoal_pit.platinum.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "item1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:ingot_platinum"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item1"
+    ]
+  ]
+}

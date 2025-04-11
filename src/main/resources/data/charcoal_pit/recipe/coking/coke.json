@@ -1,0 +1,14 @@
+{
+  "type": "charcoal_pit:coking",
+  "category": "misc",
+  "group": "coke",
+  "ingredient": {
+    "item": "minecraft:coal"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:coke"
+  },
+  "cookingtime": 1800,
+  "experience": 100
+}

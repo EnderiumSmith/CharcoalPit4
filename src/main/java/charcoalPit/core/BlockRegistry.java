@@ -24,6 +24,10 @@ public class BlockRegistry {
     public static final DeferredBlock<ColoredFallingBlock> GRAVEL_TIN=BLOCKS.register("gravel_tin",
             ()->new ColoredFallingBlock(new ColorRGBA(MapColor.COLOR_LIGHT_GRAY.col), BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
     public static final DeferredBlock<Block> ORE_TIN=BLOCKS.registerSimpleBlock("ore_tin", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE));
+    public static final DeferredBlock<Block> ORE_PLATINUM=BLOCKS.registerSimpleBlock("ore_platinum", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE));
+    public static final DeferredBlock<Block> ORE_DEEPSLATE_PLATINUM=BLOCKS.registerSimpleBlock("ore_deepslate_platinum", BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_IRON_ORE));
+    public static final DeferredBlock<Block> ORE_CHALCOCITE=BLOCKS.registerSimpleBlock("ore_dripstone_copper", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE).sound(SoundType.DRIPSTONE_BLOCK));
+    public static final DeferredBlock<Block> RAW_CHALCOCITE_BLOCK=BLOCKS.registerSimpleBlock("raw_chalcocite_block", BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK));
 
     //natural blocks
     public static final DeferredBlock<Block> BASALT=BLOCKS.registerSimpleBlock("basalt", BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.DEEPSLATE));
@@ -53,19 +57,13 @@ public class BlockRegistry {
     public static final DeferredBlock<Block> BRONZE_BLOCK=BLOCKS.registerSimpleBlock("bronze_block", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
     public static final DeferredBlock<Block> STEEL_BLOCK=BLOCKS.registerSimpleBlock("steel_block", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
     public static final DeferredBlock<Block> TIN_BLOCK=BLOCKS.registerSimpleBlock("tin_block", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
+    public static final DeferredBlock<Block> ALUMINIUM_BLOCK=BLOCKS.registerSimpleBlock("aluminium_block", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
+    public static final DeferredBlock<Block> ALUMITE_BLOCK=BLOCKS.registerSimpleBlock("alumite_block", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
+    public static final DeferredBlock<Block> PLATINUM_BLOCK=BLOCKS.registerSimpleBlock("platinum_block", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
+    public static final DeferredBlock<Block> ENDERIUM_BLOCK=BLOCKS.registerSimpleBlock("enderium_block", BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK));
 
-    public static final DeferredBlock<RotatedPillarBlock> LOG_PILE=BLOCKS.register("log_pile",
-            ()->new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)){
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 5;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 5;
-                }
-            });
+    public static final DeferredBlock<LogPileBlock> LOG_PILE=BLOCKS.register("log_pile",
+            ()->new LogPileBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).noOcclusion()));
 
     public static final DeferredBlock<BlockAsh> WOOD_ASH=BLOCKS.register("wood_ash",
             ()->new BlockAsh(new ColorRGBA(MapColor.COLOR_LIGHT_GRAY.col), BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).mapColor(MapColor.COLOR_LIGHT_GRAY)));
@@ -75,12 +73,14 @@ public class BlockRegistry {
             ()->new ColoredFallingBlock(new ColorRGBA(MapColor.COLOR_LIGHT_GRAY.col), BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).mapColor(MapColor.COLOR_LIGHT_GRAY)));
 
     public static final DeferredBlock<BlockLogPiles> ACTIVE_LOG_PILE=BLOCKS.register("active_log_pile",
-            ()->new BlockLogPiles(false,1F,LOG_PILE,WOOD_ASH, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+            ()->new BlockLogPiles(false,1F,LOG_PILE,WOOD_ASH, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).noOcclusion()));
     public static final DeferredBlock<BlockActivePile> ACTIVE_COAL_PILE=BLOCKS.register("active_coal_pile",
             ()->new BlockActivePile(true,0.6F, BuiltInRegistries.BLOCK.wrapAsHolder(Blocks.COAL_BLOCK),COAL_ASH, BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
 
     public static final DeferredBlock<BlockFlammable> CHARCOAL_BLOCK=BLOCKS.register("charcoal_block",
             ()->new BlockFlammable(5,5, BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK).sound(SoundType.NETHER_BRICKS)));
+    public static final DeferredBlock<BlockBambooCharcoal> BAMBOO_CHARCOAL=BLOCKS.register("bamboo_charcoal",
+            ()->new BlockBambooCharcoal(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK).sound(SoundType.NETHER_BRICKS)));
     public static final DeferredBlock<BlockFlammable> COKE_BLOCK=BLOCKS.register("coke_block",
             ()->new BlockFlammable(5,5, BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK).sound(SoundType.NETHER_BRICKS)));
 
@@ -121,6 +121,9 @@ public class BlockRegistry {
     public static final DeferredBlock<BlockBloomeryChimney> BLAST_FURNACE_CHIMNEY=BLOCKS.register("blast_furnace_chimney",
             ()->new BlockBloomeryChimney(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS).strength(3.5F).noLootTable()));
 
+    public static final DeferredBlock<BlockCokeOven> COKE_OVEN=BLOCKS.register("coke_oven",
+            ()->new BlockCokeOven(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS).strength(3.5F)));
+
     public static final DeferredBlock<BlockLeeks> LEEKS=BLOCKS.register("leeks",
             ()->new BlockLeeks(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
     public static final DeferredBlock<DoubleCropBlock> SUNFLOWER=BLOCKS.register("sunflower",
@@ -128,13 +131,6 @@ public class BlockRegistry {
 
     public static final DeferredBlock<BlockDwarvenCandle> DWARVEN_CANDLE=BLOCKS.register("dwarven_candle",
             ()->new BlockDwarvenCandle(BlockBehaviour.Properties.ofFullCopy(Blocks.TNT)));
-
-    public static final DeferredBlock<BlockCreosoteFunnel> CREOSOTE_FUNNEL_BRICK=BLOCKS.register("creosote_funnel_brick",
-            ()->new BlockCreosoteFunnel(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<BlockCreosoteFunnel> CREOSOTE_FUNNEL_SANDY=BLOCKS.register("creosote_funnel_sandy",
-            ()->new BlockCreosoteFunnel(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<BlockCreosoteFunnel> CREOSOTE_FUNNEL_NETHER=BLOCKS.register("creosote_funnel_nether",
-            ()->new BlockCreosoteFunnel(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
 
     public static final DeferredBlock<BlockBarrel> BARREL=BLOCKS.register("barrel",
             ()->new BlockBarrel(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
@@ -149,6 +145,9 @@ public class BlockRegistry {
             ()->new BlockStill(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
     public static final DeferredBlock<BlockStill> PRESS=BLOCKS.register("press",
             ()->new BlockPress(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+
+    public static final DeferredBlock<BlockBellowPump> BELLOW_PUMP=BLOCKS.register("bellow_pump",
+            ()->new BlockBellowPump(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
 
     /*public static final DeferredBlock<BlockCrusher> CRUSHER=BLOCKS.register("crusher",
             ()->new BlockCrusher(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));

@@ -1,0 +1,35 @@
+{
+  "parent": "charcoal_pit:charcoal_pit/carbide",
+  "display": {
+    "icon": {
+      "id": "charcoal_pit:alloy_enderium"
+    },
+    "title": {
+      "translate": "advancements.charcoal_pit.enderium.title"
+    },
+    "description": {
+      "translate": "advancements.charcoal_pit.enderium.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "item1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:alloy_enderium"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item1"
+    ]
+  ]
+}

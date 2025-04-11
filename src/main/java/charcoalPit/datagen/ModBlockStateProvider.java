@@ -24,8 +24,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(BlockRegistry.WOOD_ASH.get());
         simpleBlock(BlockRegistry.COAL_ASH.get());
         blockWithItem(BlockRegistry.ASH_BLOCK);
-        logBlock(BlockRegistry.LOG_PILE.get());
-        blockItem(BlockRegistry.LOG_PILE);
         simpleBlock(BlockRegistry.ACTIVE_COAL_PILE.get());
         blockWithItem(BlockRegistry.SANDY_BRICKS);
         stairsBlock(BlockRegistry.SANDY_STAIRS.get(), blockTexture(BlockRegistry.SANDY_BRICKS.get()));
@@ -59,6 +57,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(BlockRegistry.BRONZE_BLOCK);
         blockWithItem(BlockRegistry.STEEL_BLOCK);
         blockWithItem(BlockRegistry.TIN_BLOCK);
+        blockWithItem(BlockRegistry.ALUMINIUM_BLOCK);
+        blockWithItem(BlockRegistry.ALUMITE_BLOCK);
+        blockWithItem(BlockRegistry.ORE_PLATINUM);
+        blockWithItem(BlockRegistry.ORE_DEEPSLATE_PLATINUM);
+        blockWithItem(BlockRegistry.PLATINUM_BLOCK);
+        blockWithItem(BlockRegistry.ENDERIUM_BLOCK);
+        blockWithItem(BlockRegistry.ORE_CHALCOCITE);
+        blockWithItem(BlockRegistry.RAW_CHALCOCITE_BLOCK);
+        logBlock(BlockRegistry.BAMBOO_CHARCOAL.get());
+        blockItem(BlockRegistry.BAMBOO_CHARCOAL);
     }
 
     private void blockWithItem(DeferredBlock<?> block){

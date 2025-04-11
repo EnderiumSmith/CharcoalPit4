@@ -2,6 +2,8 @@
   "values": [
     "charcoal_pit:copper_hoe",
     "charcoal_pit:bronze_hoe",
-    "charcoal_pit:steel_hoe"
+    "charcoal_pit:steel_hoe",
+    "charcoal_pit:alumite_hoe",
+    "charcoal_pit:enderium_hoe"
   ]
 }

@@ -29,5 +29,9 @@ public class DataComponentRegistry {
             builder->builder.persistent(SimpleFluidContent.CODEC).networkSynchronized(SimpleFluidContent.STREAM_CODEC));
     public static final DeferredHolder<DataComponentType<?>,DataComponentType<Integer>> FRUIT_LEAVES_STATE=DATA_COMPONENTS.registerComponentType("fruit_leaves_state",
             builder->builder.persistent(ExtraCodecs.intRange(0,3)).networkSynchronized(ByteBufCodecs.VAR_INT));
+    public static final DeferredHolder<DataComponentType<?>,DataComponentType<Integer>> SOULS_DRANK=DATA_COMPONENTS.registerComponentType("souls_drank",
+            builder->builder.persistent(ExtraCodecs.intRange(0,Integer.MAX_VALUE)).networkSynchronized(ByteBufCodecs.VAR_INT));
+    public static final DeferredHolder<DataComponentType<?>,DataComponentType<Integer>> SOUL_LEVEL=DATA_COMPONENTS.registerComponentType("soul_level",
+            builder->builder.persistent(ExtraCodecs.intRange(1,Integer.MAX_VALUE)).networkSynchronized(ByteBufCodecs.VAR_INT));
 
 }

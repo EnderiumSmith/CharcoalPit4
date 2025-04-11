@@ -6,7 +6,7 @@
     },
     "charcoal_pit:aeternalis_fuel": {
       "clean": true,
-      "temperature": 1200
+      "temperature": 1100
     },
     "charcoal_pit:charcoal_block": {
       "clean": true,
@@ -14,15 +14,15 @@
     },
     "charcoal_pit:coke": {
       "clean": true,
-      "temperature": 1100
+      "temperature": 1200
     },
     "charcoal_pit:coke_block": {
       "clean": true,
-      "temperature": 1100
+      "temperature": 1200
     },
     "minecraft:blaze_rod": {
       "clean": true,
-      "temperature": 1400
+      "temperature": 1600
     },
     "minecraft:charcoal": {
       "clean": true,

@@ -1,0 +1,12 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "charcoal_pit:muriatic_acid"
+  },
+  "amount_in": 8000,
+  "fluid_out": {
+    "fluid": "charcoal_pit:chlorine"
+  },
+  "amount_out": 2400,
+  "process_time": 200
+}

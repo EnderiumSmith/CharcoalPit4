@@ -4,6 +4,11 @@
     "#c:ingots/bronze",
     "#c:ingots/pigiron",
     "#c:ingots/steel",
-    "#c:ingots/red_alloy"
+    "#c:ingots/sodium",
+    "#c:ingots/aluminium",
+    "#c:ingots/aluminum",
+    "#c:ingots/alumite",
+    "#c:ingots/platinum",
+    "#c:ingots/enderium"
   ]
 }

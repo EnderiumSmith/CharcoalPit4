@@ -1,0 +1,18 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "amount_in": 200,
+  "item_in": {
+    "item": "charcoal_pit:black_ash"
+  },
+  "fluid_out": {
+    "fluid": "charcoal_pit:hydrogen_sulfide"
+  },
+  "amount_out": 3200,
+  "item_out": {
+    "item": "charcoal_pit:natron"
+  },
+  "process_time": 400
+}

@@ -18,9 +18,6 @@
     "charcoal_pit:active_coal_pile",
     "charcoal_pit:coal_ash",
     "minecraft:coal_block",
-    "charcoal_pit:creosote_funnel_brick",
-    "charcoal_pit:creosote_funnel_sandy",
-    "charcoal_pit:creosote_funnel_nether",
     "charcoal_pit:high_refractory_bricks"
   ]
 }

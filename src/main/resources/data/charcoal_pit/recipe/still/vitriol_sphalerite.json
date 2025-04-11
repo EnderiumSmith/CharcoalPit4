@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/zinc"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/zinc"
+      }
+    }
+  ],
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "amount_in": 200,
+  "item_in": {
+    "tag": "c:raw_materials/zinc"
+  },
+  "catalyst": {
+    "tag": "c:dusts/niter"
+  },
+  "chance": 0.05,
+  "fluid_out": {
+    "fluid": "charcoal_pit:oil_of_vitriol"
+  },
+  "amount_out": 100,
+  "item_out": {
+    "tag": "c:ingots/zinc"
+  },
+  "xp": 0.7,
+  "process_time": 200
+}

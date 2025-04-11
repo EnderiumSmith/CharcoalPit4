@@ -1,0 +1,15 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "amount_in": 200,
+  "item_in": {
+    "tag": "c:dusts/calcium_carbide"
+  },
+  "fluid_out": {
+    "fluid": "charcoal_pit:acetylene"
+  },
+  "amount_out": 5600,
+  "process_time": 100
+}

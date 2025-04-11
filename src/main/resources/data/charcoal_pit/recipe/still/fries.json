@@ -1,15 +1,19 @@
 {
   "type": "charcoal_pit:still",
   "fluid_in": {
-    "fluid": "charcoal_pit:seed_oil"
+    "tag": "c:seed_oil"
   },
   "amount_in": 10,
   "item_in": {
     "item": "minecraft:potato"
   },
-  "item_out": {
-    "count": 1,
-    "id": "charcoal_pit:poisonous_potato_fries"
+  "catalyst": {
+    "tag": "c:dusts/salt"
   },
+  "chance": 0.05,
+  "item_out": {
+    "item": "charcoal_pit:poisonous_potato_fries"
+  },
+  "xp": 0.35,
   "process_time": 200
 }

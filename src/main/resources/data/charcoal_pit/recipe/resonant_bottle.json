@@ -1,0 +1,16 @@
+{
+  "type": "charcoal_pit:hot_blasting",
+  "temperature": 3017,
+  "cooking_time": 400,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "minecraft:ender_pearl"
+  },
+  "flux": {
+    "item": "minecraft:glass_bottle"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:resonant_bottle"
+  }
+}

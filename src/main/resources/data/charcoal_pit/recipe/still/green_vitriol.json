@@ -1,0 +1,14 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "tag": "c:sulfuric_acid"
+  },
+  "amount_in": 100,
+  "item_in": {
+    "tag": "c:ingots/iron"
+  },
+  "item_out": {
+    "item": "charcoal_pit:green_vitriol"
+  },
+  "process_time": 100
+}

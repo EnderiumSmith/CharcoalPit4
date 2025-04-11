@@ -1,0 +1,17 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "tag": "c:chlorine"
+  },
+  "amount_in": 7200,
+  "item_in": {
+    "item": "charcoal_pit:alumina"
+  },
+  "catalyst": {
+    "tag": "c:dusts/coke"
+  },
+  "item_out": {
+    "item": "charcoal_pit:aluminium_chloride"
+  },
+  "process_time": 1200
+}

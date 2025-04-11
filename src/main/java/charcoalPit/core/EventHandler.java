@@ -13,11 +13,14 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.Mth;
+import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AnvilMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -26,15 +29,20 @@ import net.minecraft.world.level.block.BaseFireBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
+import charcoalPit.items.ItemSoulDrinker;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderPlayerEvent;
 import net.neoforged.neoforge.common.BasicItemListing;
 import net.neoforged.neoforge.event.AnvilUpdateEvent;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
+import net.neoforged.neoforge.event.entity.player.AnvilRepairEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
@@ -95,6 +103,24 @@ public class EventHandler {
                 left.getItem() == Items.STONE_SWORD || left.getItem() == Items.STONE_HOE);
     }
 
+    @SubscribeEvent
+    public static void combineSoulDrinkers(AnvilRepairEvent event){
+        if(event.getLeft().getItem()==ItemRegistry.SOUL_DRINKER.get()&&event.getRight().getItem()==ItemRegistry.SOUL_DRINKER.get()){
+            event.getOutput().set(DataComponentRegistry.SOULS_DRANK,event.getOutput().get(DataComponentRegistry.SOULS_DRANK)+event.getRight().get(DataComponentRegistry.SOULS_DRANK));
+        }
+    }
+
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    public static void chargeSoulDrinker(LivingDeathEvent event){
+        if(!event.isCanceled()&&event.getSource().isDirect()&&event.getSource().getDirectEntity() instanceof Player player){
+            if(player.getMainHandItem().getItem()==ItemRegistry.SOUL_DRINKER.get()){
+                if(event.getSource().is(DamageTypeTags.IS_PLAYER_ATTACK)&&!event.getSource().is(DamageTypeTags.IS_PROJECTILE)){
+                    ItemSoulDrinker.charge(player.getMainHandItem(),event.getEntity(),player);
+                }
+            }
+        }
+    }
+
     /*public static void fillGoldPan(UseItemOnBlockEvent event){
         if(event.getPlayer()!=null&&event.getUsePhase()== UseItemOnBlockEvent.UsePhase.BLOCK&&event.getItemStack().getItem()==Items.BOWL){
             if(event.getLevel().getBlockState(event.getPos()).is(Tags.Blocks.GRAVELS)){
@@ -113,7 +139,6 @@ public class EventHandler {
         }
     }*/
 
-    @SubscribeEvent
     public static void ignitePiles(BlockEvent.NeighborNotifyEvent event){
         if(event.getState().getBlock() instanceof BaseFireBlock){
             for(Direction dir:event.getNotifiedSides()){

@@ -1,0 +1,19 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "amount_in": 200,
+  "item_in": {
+    "tag": "c:dusts/sulfur"
+  },
+  "catalyst": {
+    "tag": "c:dusts/niter"
+  },
+  "chance": 0.05,
+  "fluid_out": {
+    "fluid": "charcoal_pit:oil_of_vitriol"
+  },
+  "amount_out": 100,
+  "process_time": 200
+}

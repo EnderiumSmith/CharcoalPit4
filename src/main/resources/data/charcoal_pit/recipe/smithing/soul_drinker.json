@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:amethyst_cluster"
+  },
+  "base": {
+    "item": "minecraft:diamond_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:soul_drinker"
+  },
+  "template": {
+    "item": "charcoal_pit:charged_echo_shard"
+  }
+}

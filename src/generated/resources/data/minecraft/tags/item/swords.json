@@ -2,6 +2,8 @@
   "values": [
     "charcoal_pit:copper_sword",
     "charcoal_pit:bronze_sword",
-    "charcoal_pit:steel_sword"
+    "charcoal_pit:steel_sword",
+    "charcoal_pit:alumite_sword",
+    "charcoal_pit:enderium_sword"
   ]
 }

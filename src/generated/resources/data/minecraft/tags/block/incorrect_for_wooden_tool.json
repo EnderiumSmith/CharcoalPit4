@@ -1,6 +1,8 @@
 {
   "values": [
     "charcoal_pit:ore_tin",
-    "charcoal_pit:tin_block"
+    "charcoal_pit:tin_block",
+    "charcoal_pit:aluminium_block",
+    "charcoal_pit:ore_dripstone_copper"
   ]
 }

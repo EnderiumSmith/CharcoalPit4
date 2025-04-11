@@ -1,6 +1,10 @@
 {
   "values": [
     "charcoal_pit:bronze_block",
-    "charcoal_pit:steel_block"
+    "charcoal_pit:steel_block",
+    "charcoal_pit:alumite_block",
+    "charcoal_pit:ore_platinum",
+    "charcoal_pit:ore_deepslate_platinum",
+    "charcoal_pit:platinum_block"
   ]
 }

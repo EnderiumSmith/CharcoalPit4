@@ -1,7 +1,13 @@
 {
   "values": {
+    "charcoal_pit:acetylene_bucket": {
+      "burn_time": 400
+    },
     "charcoal_pit:aeternalis_fuel": {
       "burn_time": 200
+    },
+    "charcoal_pit:bamboo_charcoal": {
+      "burn_time": 800
     },
     "charcoal_pit:biodiesel_bucket": {
       "burn_time": 25600
@@ -14,6 +20,9 @@
     },
     "charcoal_pit:coke_block": {
       "burn_time": 32000
+    },
+    "charcoal_pit:coke_powder": {
+      "burn_time": 3200
     },
     "charcoal_pit:creosote_bucket": {
       "burn_time": 4800

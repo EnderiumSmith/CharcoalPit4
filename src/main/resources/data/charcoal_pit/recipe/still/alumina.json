@@ -1,0 +1,22 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "fluid": "minecraft:water"
+  },
+  "amount_in": 300,
+  "item_in": {
+    "item": "charcoal_pit:alum"
+  },
+  "catalyst": {
+    "tag": "c:dusts/niter"
+  },
+  "chance": 0.075,
+  "fluid_out": {
+    "fluid": "charcoal_pit:oil_of_vitriol"
+  },
+  "amount_out": 150,
+  "item_out": {
+    "item": "charcoal_pit:alumina"
+  },
+  "process_time": 200
+}

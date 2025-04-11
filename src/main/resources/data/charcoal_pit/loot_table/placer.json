@@ -66,6 +66,22 @@
           "weight": 2
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "charcoal_pit:raw_platinum"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:table_bonus",
+          "enchantment": "minecraft:fortune",
+          "chances": [0.005, 0.01, 0.015, 0.02]
+        }
+      ]
     }
   ]
 }

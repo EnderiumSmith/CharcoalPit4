@@ -1,0 +1,15 @@
+{
+  "type": "charcoal_pit:still",
+  "fluid_in": {
+    "tag": "c:sulfuric_acid"
+  },
+  "amount_in": 300,
+  "item_in": {
+    "item": "minecraft:clay_ball"
+  },
+  "item_amount": 7,
+  "item_out": {
+    "item": "charcoal_pit:alum"
+  },
+  "process_time": 700
+}

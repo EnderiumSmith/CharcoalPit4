@@ -5,6 +5,7 @@ import charcoalPit.block.BlockBloomeryChimney;
 import charcoalPit.core.TileEntityRegistry;
 import charcoalPit.dataMap.DataMapRegistry;
 import charcoalPit.dataMap.FuelTemperatureData;
+import charcoalPit.fluid.FluidRegistry;
 import charcoalPit.recipe.BlastFurnaceRecipe;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -23,6 +24,10 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import net.neoforged.neoforge.fluids.capability.templates.FluidTank;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.registries.datamaps.builtin.FurnaceFuel;
@@ -306,6 +311,56 @@ public class TileBlastFurnace extends BlockEntity {
         @Override
         public boolean isItemValid(int slot, ItemStack stack) {
             return slot<RESULT?inventory.isItemValid(slot,stack):false;
+        }
+    };
+
+    public final IFluidHandler gasBoost=new IFluidHandler() {
+        @Override
+        public int getTanks() {
+            return 1;
+        }
+
+        @Override
+        public FluidStack getFluidInTank(int tank) {
+            return FluidStack.EMPTY;
+        }
+
+        @Override
+        public int getTankCapacity(int tank) {
+            return 1000;
+        }
+
+        @Override
+        public boolean isFluidValid(int tank, FluidStack stack) {
+            return stack.is(FluidRegistry.ACETYLENE.fluidType.get());
+        }
+
+        @Override
+        public int fill(FluidStack resource, FluidAction action) {
+            if(isFluidValid(0,resource)&&resource.getAmount()>=10){
+                if(burnTime==0||(baseTemp==2700&&burnTime<80)){
+                    int fuel=Math.min(80-burnTime,resource.getAmount()/10*4);
+                    if(action==FluidAction.EXECUTE){
+                        burnTime+=fuel;
+                        burnTotal=80;
+                        baseTemp=2700;
+                        setActive(true);
+                        setChanged();
+                    }
+                    return fuel/4*10;
+                }
+            }
+            return 0;
+        }
+
+        @Override
+        public FluidStack drain(FluidStack resource, FluidAction action) {
+            return FluidStack.EMPTY;
+        }
+
+        @Override
+        public FluidStack drain(int maxDrain, FluidAction action) {
+            return FluidStack.EMPTY;
         }
     };
 

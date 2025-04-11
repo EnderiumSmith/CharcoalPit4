@@ -2,6 +2,8 @@
   "values": [
     "charcoal_pit:copper_axe",
     "charcoal_pit:bronze_axe",
-    "charcoal_pit:steel_axe"
+    "charcoal_pit:steel_axe",
+    "charcoal_pit:alumite_axe",
+    "charcoal_pit:enderium_axe"
   ]
 }

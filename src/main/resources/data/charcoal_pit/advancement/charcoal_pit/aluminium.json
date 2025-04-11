@@ -1,0 +1,35 @@
+{
+  "parent": "charcoal_pit:charcoal_pit/natrium",
+  "display": {
+    "icon": {
+      "id": "charcoal_pit:ingot_aluminium"
+    },
+    "title": {
+      "translate": "advancements.charcoal_pit.aluminium.title"
+    },
+    "description": {
+      "translate": "advancements.charcoal_pit.aluminium.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "item1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:ingot_aluminium"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item1"
+    ]
+  ]
+}

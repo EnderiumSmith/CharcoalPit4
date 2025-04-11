@@ -38,17 +38,20 @@ public class ModDataMapProvider extends DataMapProvider {
                 .add(FluidRegistry.ETHANOL.bucket.getId(),new FurnaceFuel(15200),false)
                 .add(FluidRegistry.BIODIESEL.bucket.getId(),new FurnaceFuel(25600),false)
                 .add(ItemRegistry.GLYCERINE.getId(),new FurnaceFuel(1200),false)
-                .add(ItemRegistry.ETHANOL_BOTTLE.getId(),new FurnaceFuel(3800),false);
+                .add(ItemRegistry.ETHANOL_BOTTLE.getId(),new FurnaceFuel(3800),false)
+                .add(ItemRegistry.COKE_POWDER.getId(),new FurnaceFuel(3200),false)
+                .add(FluidRegistry.ACETYLENE.bucket.getId(),new FurnaceFuel(400),false)
+                .add(ItemRegistry.BAMBOO_CHARCOAL.getId(),new FurnaceFuel(200*4), false);
         this.builder(DataMapRegistry.FUEL_TEMPERATURE)
                 .add(ItemTags.LOGS_THAT_BURN,new FuelTemperatureData(700, false),false)
                 .add(BuiltInRegistries.ITEM.wrapAsHolder(Items.CHARCOAL),new FuelTemperatureData(900,true),false)
                 .add(ItemRegistry.CHARCOAL_BLOCK,new FuelTemperatureData(900,true),false)
                 .add(BuiltInRegistries.ITEM.wrapAsHolder(Items.COAL),new FuelTemperatureData(1000,false),false)
                 .add(BuiltInRegistries.ITEM.wrapAsHolder(Items.COAL_BLOCK),new FuelTemperatureData(1000,false),false)
-                .add(ItemRegistry.COKE,new FuelTemperatureData(1100,true),false)
-                .add(ItemRegistry.COKE_BLOCK,new FuelTemperatureData(1100,true),false)
-                .add(BuiltInRegistries.ITEM.wrapAsHolder(Items.BLAZE_ROD),new FuelTemperatureData(1400,true),false)
-                .add(ItemRegistry.AETERNALIS,new FuelTemperatureData(1200,true),false);
+                .add(ItemRegistry.COKE,new FuelTemperatureData(1200,true),false)
+                .add(ItemRegistry.COKE_BLOCK,new FuelTemperatureData(1200,true),false)
+                .add(BuiltInRegistries.ITEM.wrapAsHolder(Items.BLAZE_ROD),new FuelTemperatureData(1600,true),false)
+                .add(ItemRegistry.AETERNALIS,new FuelTemperatureData(1100,true),false);
         this.builder(NeoForgeDataMaps.COMPOSTABLES)
                 .add(ItemRegistry.CHERRY.getId(), new Compostable(0.65F),false)
                 .add(ItemRegistry.WALNUT.getId(), new Compostable(0.65F),false)

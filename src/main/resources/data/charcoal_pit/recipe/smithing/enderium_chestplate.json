@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "charcoal_pit:double_ingot_enderium"
+  },
+  "base": {
+    "item": "charcoal_pit:alumite_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "charcoal_pit:enderium_chestplate"
+  },
+  "template": {
+    "item": "minecraft:blaze_powder"
+  }
+}

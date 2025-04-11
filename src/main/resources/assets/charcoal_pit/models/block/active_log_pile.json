@@ -1,7 +1,8 @@
 {
-  "parent": "minecraft:block/cube_column",
+  "parent": "charcoal_pit:block/log_pile",
   "textures": {
-    "end": "charcoal_pit:block/active_log_pile_top",
-    "side": "charcoal_pit:block/active_log_pile_side"
+    "particle": "charcoal_pit:block/active_log_pile_side",
+    "texture": "charcoal_pit:block/active_log_pile_side",
+    "top": "charcoal_pit:block/active_log_pile_top"
   }
 }

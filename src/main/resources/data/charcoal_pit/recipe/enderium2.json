@@ -1,0 +1,16 @@
+{
+  "type": "charcoal_pit:hot_blasting",
+  "temperature": 3186,
+  "cooking_time": 600,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "charcoal_pit:double_ingot_enderium"
+  },
+  "flux": {
+    "item": "minecraft:blaze_powder"
+  },
+  "result": {
+    "count": 2,
+    "id": "charcoal_pit:alloy_enderium"
+  }
+}

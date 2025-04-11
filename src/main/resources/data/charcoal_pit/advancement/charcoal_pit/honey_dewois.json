@@ -1,0 +1,35 @@
+{
+  "parent": "charcoal_pit:charcoal_pit/alchemy",
+  "display": {
+    "icon": {
+      "id": "charcoal_pit:honey_dewois"
+    },
+    "title": {
+      "translate": "advancements.charcoal_pit.honey_dewois.title"
+    },
+    "description": {
+      "translate": "advancements.charcoal_pit.honey_dewois.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "item1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:honey_dewois"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item1"
+    ]
+  ]
+}

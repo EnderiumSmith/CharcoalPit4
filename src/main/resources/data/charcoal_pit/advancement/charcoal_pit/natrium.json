@@ -1,0 +1,35 @@
+{
+  "parent": "charcoal_pit:charcoal_pit/vitriol",
+  "display": {
+    "icon": {
+      "id": "charcoal_pit:ingot_sodium"
+    },
+    "title": {
+      "translate": "advancements.charcoal_pit.natrium.title"
+    },
+    "description": {
+      "translate": "advancements.charcoal_pit.natrium.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "item1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "charcoal_pit:ingot_sodium"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "item1"
+    ]
+  ]
+}

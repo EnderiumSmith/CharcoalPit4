@@ -28,5 +28,7 @@ public class MenuTypeRegistry {
             ()->new MenuType<>(CrusherMenu::new,FeatureFlags.DEFAULT_FLAGS));*/
     public static final Supplier<MenuType<CeramicPotMenu>> CERAMIC_POT=MENU_TYPES.register("ceramic_pot",
             ()->new MenuType<>(CeramicPotMenu::new,FeatureFlags.DEFAULT_FLAGS));
+    public static final Supplier<MenuType<CokeOvenMenu>> COKE_OVEN=MENU_TYPES.register("coke_oven",
+            ()->new MenuType<>(CokeOvenMenu::new,FeatureFlags.DEFAULT_FLAGS));
 
 }

@@ -73,6 +73,7 @@ public class ClientSetup {
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.AMARANTH_LEAVES.get(), RenderType.CUTOUT);
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.STRAWBERRY_BUSH.get(), RenderType.CUTOUT);
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.COKE_OVEN.get(), RenderType.CUTOUT);
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.AIKO_PLUSH.get(), RenderType.CUTOUT);
         /*ItemBlockRenderTypes.setRenderLayer(FluidRegistry.HYDROGEN_SULFIDE.source.get(), RenderType.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(FluidRegistry.HYDROGEN_SULFIDE.flowing.get(), RenderType.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(FluidRegistry.CHLORINE.source.get(), RenderType.TRANSLUCENT);

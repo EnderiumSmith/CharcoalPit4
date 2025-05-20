@@ -172,6 +172,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ItemRegistry.COPPER_CHESTPLATE.get());
         basicItem(ItemRegistry.COPPER_LEGGINGS.get());
         basicItem(ItemRegistry.COPPER_BOOTS.get());
+        basicItem(ItemRegistry.STEEL_NUGGET.get());
     }
 
     private ItemModelBuilder HandheldItem(DeferredItem<?> item){

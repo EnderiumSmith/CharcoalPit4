@@ -1,10 +1,14 @@
 package charcoalPit.items;
 
+import java.util.function.Consumer;
+
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
@@ -13,6 +17,7 @@ import charcoalPit.core.DataComponentRegistry;
 import charcoalPit.core.ToolTiers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.Nullable;
 
 public class ItemSoulDrinker extends SwordItem {
 	public ItemSoulDrinker(Tier tier, Properties properties) {
@@ -67,4 +72,5 @@ public class ItemSoulDrinker extends SwordItem {
 			return true;
 		return super.isBarVisible(stack);
 	}
+
 }

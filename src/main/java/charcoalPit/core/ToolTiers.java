@@ -14,8 +14,8 @@ public class ToolTiers {
     public static final Tier BRONZE=new SimpleTier(BlockTags.INCORRECT_FOR_IRON_TOOL,250,6.0F,2.0F,15,()-> Ingredient.of(ItemRegistry.BRONZE.get()));
     public static final Tier STEEL=new SimpleTier(BlockTags.INCORRECT_FOR_IRON_TOOL,500,7.0F,3F,7,()-> Ingredient.of(ItemRegistry.STEEL.get()));
     public static final Tier ALUMINIUM=new SimpleTier(BlockTags.INCORRECT_FOR_STONE_TOOL,145,4.0F,1.25F,5,()-> Ingredient.of(ItemRegistry.ALUMINIUM.get()));
-    public static final Tier ALUMITE=new SimpleTier(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,909,7F,2F,1,()-> Ingredient.of(ItemRegistry.ALUMITE.get()));
-    public static final Tier ENDERIUM=new SimpleTier(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,1751,12F,5F,15,()-> Ingredient.of(ItemRegistry.ENDERIUM.get()));
+    public static final Tier ALUMITE=new SimpleTier(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,1400,7F,2F,1,()-> Ingredient.of(ItemRegistry.ALUMITE.get()));
+    public static final Tier ENDERIUM=new SimpleTier(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,2151,12F,5F,15,()-> Ingredient.of(ItemRegistry.ENDERIUM.get()));
     public static final Tier PLATINUM=new SimpleTier(BlockTags.INCORRECT_FOR_IRON_TOOL,1400,14F,1F,20,()-> Ingredient.of(ItemRegistry.PLATINUM.get()));
     public static final Tier SOUL_DRINKER=new SimpleTier(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,780,8F,2F,15,()-> Ingredient.of(Items.ECHO_SHARD));
     /*
@@ -40,6 +40,16 @@ public class ToolTiers {
     ALUMITE 27
     DIAMOND 33
     NETHERITE 37
+     */
+
+    /*
+    FLINT       64      0   4   4
+    GOLD        96      0   4   12
+    COPPER      192     0   5   5
+    BRONZE/IRON 480     1   6   6
+    STEEL       1024    2   7   7
+    DIAMOND     2560    3   7   8
+    NETHERITE   4098    3   9   12
      */
 
 }

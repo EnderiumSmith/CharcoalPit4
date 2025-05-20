@@ -50,7 +50,7 @@ public class StillRecipe implements Recipe<SingleRecipeInput> {
 
     @Override
     public ItemStack assemble(SingleRecipeInput singleRecipeInput, HolderLookup.Provider provider) {
-        return new ItemStack(itemOut.getItems()[0].getItem(),itemAmountOut);
+        return itemOut.isEmpty()?ItemStack.EMPTY:new ItemStack(itemOut.getItems()[0].getItem(),itemAmountOut);
     }
 
     @Override
@@ -60,7 +60,7 @@ public class StillRecipe implements Recipe<SingleRecipeInput> {
 
     @Override
     public ItemStack getResultItem(HolderLookup.Provider provider) {
-        return new ItemStack(itemOut.getItems()[0].getItem(),itemAmountOut);
+        return itemOut.isEmpty()?ItemStack.EMPTY:new ItemStack(itemOut.getItems()[0].getItem(),itemAmountOut);
     }
 
     public ItemStack getResult(){

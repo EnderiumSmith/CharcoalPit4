@@ -149,6 +149,9 @@ public class BlockRegistry {
     public static final DeferredBlock<BlockBellowPump> BELLOW_PUMP=BLOCKS.register("bellow_pump",
             ()->new BlockBellowPump(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
 
+    public static final DeferredBlock<BlockAikoPlush> AIKO_PLUSH=BLOCKS.register("aiko_plush",
+            ()->new BlockAikoPlush(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+
     /*public static final DeferredBlock<BlockCrusher> CRUSHER=BLOCKS.register("crusher",
             ()->new BlockCrusher(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 

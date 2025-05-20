@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-09T17:37:20.848367987	Item Models: charcoal_pit
+// 1.21.1	2025-04-16T16:21:52.908892684	Item Models: charcoal_pit
 dc2a19452d62133b35c56aecf273965cfffd4857 assets/charcoal_pit/models/item/acetylene_bucket.json
 ccef5aa1c0beaa294ddde38067d68f6b9682e9c9 assets/charcoal_pit/models/item/aeternalis_fuel.json
 982a91bed5ed9049bf027952c9c717253cfdd80b assets/charcoal_pit/models/item/alcohol_bottle.json
@@ -136,6 +136,7 @@ de8e46e9c5e3e5bdf718a1fc86ed5c9a4fbdb730 assets/charcoal_pit/models/item/steel_c
 0f2664169719c2194ca15cda51777ece2f8fa73c assets/charcoal_pit/models/item/steel_hoe.json
 1cf2ee4c58ffb9a07cc6832a08b13e7cb8fd996d assets/charcoal_pit/models/item/steel_knife.json
 a197c395816f52c5cd590b441659837e38645a7a assets/charcoal_pit/models/item/steel_leggings.json
+884da58c32972a7ab1acee591877da9ee38daf28 assets/charcoal_pit/models/item/steel_nugget.json
 35a4b7126bd3528c50a270a70bfc0455f90d0fe6 assets/charcoal_pit/models/item/steel_pickaxe.json
 dd30ff6b34ff9f64cad0584ec0d2bef48afb190b assets/charcoal_pit/models/item/steel_shovel.json
 8ee3caffc994d68f3a0483b19774758b811d4ed9 assets/charcoal_pit/models/item/steel_sword.json

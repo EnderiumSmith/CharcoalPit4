@@ -1,6 +1,7 @@
-// 1.21.1	2025-04-11T06:25:35.061672589	Loot Tables
+// 1.21.1	2025-05-18T06:01:20.257518584	Loot Tables
 b98765d3b2f1fb11f6d5e84f2a7b4b7b04c08a8e data/charcoal_pit/loot_table/blocks/active_coal_pile.json
 0fc66bfa02275071a21ede365cca2558497dd5de data/charcoal_pit/loot_table/blocks/active_log_pile.json
+b92d8c0ccf4161c3fcf50d6f72e58d89932ccda8 data/charcoal_pit/loot_table/blocks/aiko_plush.json
 9f02947a31b27f713b4102e057a7c42cc6c852ae data/charcoal_pit/loot_table/blocks/aluminium_block.json
 19aa61f4717d974b834919b89fb2f1b499cdf2f6 data/charcoal_pit/loot_table/blocks/alumite_block.json
 ba992c9fa32066a3bb664001dda7bbdf3f2cd8e7 data/charcoal_pit/loot_table/blocks/apple_sapling.json

@@ -155,6 +155,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('H', Items.HAY_BLOCK)
                 .unlockedBy("",has(Items.HAY_BLOCK))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ItemRegistry.AIKO_PLUSH.get())
+                .pattern("BGB")
+                .pattern("KAK")
+                .define('B', Items.BLUE_WOOL)
+                .define('K', Items.BLACK_WOOL)
+                .define('G', Items.LIME_DYE)
+                .define('A', ALUMINIUM)
+                .unlockedBy("",has(ALUMINIUM))
+                .save(recipeOutput);
 
         //ITEMS
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ItemRegistry.FERTILIZER.get(),2)
@@ -413,6 +422,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         makeCompressionRecipe(recipeOutput,ItemRegistry.ALUMITE.get(),ItemRegistry.ALUMITE_BLOCK.get());
         makeCompressionRecipe(recipeOutput,ItemRegistry.PLATINUM.get(),ItemRegistry.PLATINUM_BLOCK.get());
         makeCompressionRecipe(recipeOutput,ItemRegistry.ENDERIUM.get(),ItemRegistry.ENDERIUM_BLOCK.get());
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ItemRegistry.STEEL)
+                .requires(ItemRegistry.STEEL_NUGGET)
+                .requires(ItemRegistry.STEEL_NUGGET)
+                .requires(ItemRegistry.STEEL_NUGGET)
+                .requires(ItemRegistry.STEEL_NUGGET)
+                .requires(ItemRegistry.STEEL_NUGGET)
+                .requires(ItemRegistry.STEEL_NUGGET)
+                .requires(ItemRegistry.STEEL_NUGGET)
+                .requires(ItemRegistry.STEEL_NUGGET)
+                .requires(ItemRegistry.STEEL_NUGGET)
+                .unlockedBy("",has(ItemRegistry.STEEL_NUGGET))
+                .save(recipeOutput,"charcoal_pit:nugget_compression");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ItemRegistry.STEEL_NUGGET,9)
+                .requires(ItemRegistry.STEEL)
+                .unlockedBy("",has(ItemRegistry.STEEL))
+                .save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ItemRegistry.ENDERIUM_DUST, 4)
                 .requires(ItemRegistry.TIN_DUST)
@@ -720,6 +745,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('W', ItemTags.PLANKS)
                 .unlockedBy("",has(STEEL))
                 .save(output,"charcoal_pit:steel_shield");
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Items.ANVIL,2)
+                .pattern("BBB")
+                .pattern(" S ")
+                .pattern("SSS")
+                .define('S', STEEL)
+                .define('B', STEEL_BLOCK)
+                .unlockedBy("",has(STEEL))
+                .save(output,"charcoal_pit:steel_anvil");
     }
 
 

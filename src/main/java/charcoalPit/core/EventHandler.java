@@ -1,5 +1,7 @@
 package charcoalPit.core;
 
+import java.util.ArrayList;
+
 import charcoalPit.CharcoalPit;
 import charcoalPit.effect.ModPotions;
 import charcoalPit.effect.PotionRecipe;
@@ -29,6 +31,10 @@ import net.minecraft.world.level.block.BaseFireBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.storage.loot.BuiltInLootTables;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 
 import charcoalPit.items.ItemSoulDrinker;
 import net.neoforged.api.distmarker.Dist;
@@ -39,6 +45,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderPlayerEvent;
 import net.neoforged.neoforge.common.BasicItemListing;
 import net.neoforged.neoforge.event.AnvilUpdateEvent;
+import net.neoforged.neoforge.event.LootTableLoadEvent;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
@@ -121,6 +128,18 @@ public class EventHandler {
         }
     }
 
+    @SubscribeEvent
+    public static void addSnifferLoot(LootTableLoadEvent event){
+        if(event.getName().equals(BuiltInLootTables.SNIFFER_DIGGING.location())){
+            LootPool main=event.getTable().getPool("main");
+            if(main!=null){
+                ArrayList<LootPoolEntryContainer> entries = new ArrayList<>(main.entries);
+                entries.add(LootItem.lootTableItem(ItemRegistry.AMARANTH_SAPLING.asItem()).build());
+                main.entries = entries;
+            }
+        }
+    }
+
     /*public static void fillGoldPan(UseItemOnBlockEvent event){
         if(event.getPlayer()!=null&&event.getUsePhase()== UseItemOnBlockEvent.UsePhase.BLOCK&&event.getItemStack().getItem()==Items.BOWL){
             if(event.getLevel().getBlockState(event.getPos()).is(Tags.Blocks.GRAVELS)){
@@ -139,7 +158,7 @@ public class EventHandler {
         }
     }*/
 
-    public static void ignitePiles(BlockEvent.NeighborNotifyEvent event){
+    /*public static void ignitePiles(BlockEvent.NeighborNotifyEvent event){
         if(event.getState().getBlock() instanceof BaseFireBlock){
             for(Direction dir:event.getNotifiedSides()){
                 BlockPos newPos=event.getPos().relative(dir);
@@ -153,7 +172,7 @@ public class EventHandler {
                 }
             }
         }
-    }
+    }*/
 
     public static final ResourceKey<MobEffect> DRUNK=ResourceKey.create(Registries.MOB_EFFECT, ResourceLocation.fromNamespaceAndPath(CharcoalPit.MODID,"drunk"));
 

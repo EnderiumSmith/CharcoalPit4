@@ -94,6 +94,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(BlockRegistry.RAW_CHALCOCITE_BLOCK.get());
         dropSelf(BlockRegistry.BAMBOO_CHARCOAL.get());
         dropSelf(BlockRegistry.COKE_OVEN.get());
+        dropSelf(BlockRegistry.AIKO_PLUSH.get());
     }
 
     @Override
@@ -113,6 +114,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 BlockRegistry.GREEN_POT.get(),BlockRegistry.CYAN_POT.get(),BlockRegistry.LIGHT_BLUE_POT.get(),BlockRegistry.BLUE_POT.get(),BlockRegistry.PURPLE_POT.get(),
                 BlockRegistry.MAGENTA_POT.get(),BlockRegistry.PINK_POT.get(),BlockRegistry.NEST_BOX.get(),BlockRegistry.FEEDING_THROUGH.get(),BlockRegistry.BELLOW_PUMP.get(),
                 BlockRegistry.ALUMINIUM_BLOCK.get(),BlockRegistry.ALUMITE_BLOCK.get(),BlockRegistry.ORE_PLATINUM.get(),BlockRegistry.ORE_DEEPSLATE_PLATINUM.get(),BlockRegistry.PLATINUM_BLOCK.get(),
-                BlockRegistry.ENDERIUM_BLOCK.get(),BlockRegistry.ORE_CHALCOCITE.get(),BlockRegistry.RAW_CHALCOCITE_BLOCK.get(),BlockRegistry.BAMBOO_CHARCOAL.get(),BlockRegistry.COKE_OVEN.get());
+                BlockRegistry.ENDERIUM_BLOCK.get(),BlockRegistry.ORE_CHALCOCITE.get(),BlockRegistry.RAW_CHALCOCITE_BLOCK.get(),BlockRegistry.BAMBOO_CHARCOAL.get(),BlockRegistry.COKE_OVEN.get(),
+                BlockRegistry.AIKO_PLUSH.get());
     }
 }

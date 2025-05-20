@@ -3,11 +3,35 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "charcoal_pit:steel_block"
+      "item": "charcoal_pit:steel_nugget"
+    },
+    {
+      "item": "charcoal_pit:steel_nugget"
+    },
+    {
+      "item": "charcoal_pit:steel_nugget"
+    },
+    {
+      "item": "charcoal_pit:steel_nugget"
+    },
+    {
+      "item": "charcoal_pit:steel_nugget"
+    },
+    {
+      "item": "charcoal_pit:steel_nugget"
+    },
+    {
+      "item": "charcoal_pit:steel_nugget"
+    },
+    {
+      "item": "charcoal_pit:steel_nugget"
+    },
+    {
+      "item": "charcoal_pit:steel_nugget"
     }
   ],
   "result": {
-    "count": 9,
+    "count": 1,
     "id": "charcoal_pit:alloy_steel"
   }
 }

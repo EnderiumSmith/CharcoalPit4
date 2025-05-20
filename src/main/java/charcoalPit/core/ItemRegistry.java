@@ -93,6 +93,7 @@ public class ItemRegistry {
     public static final DeferredItem<Item> ENDERIUM=ITEMS.registerSimpleItem("alloy_enderium",new Item.Properties().rarity(Rarity.RARE).fireResistant());
     public static final DeferredItem<Item> ENDERIUM_DOUBLE=ITEMS.registerSimpleItem("double_ingot_enderium",new Item.Properties().rarity(Rarity.RARE).fireResistant());
     //public static final DeferredItem<Item> RED_ALLOY=ITEMS.registerSimpleItem("alloy_red");
+    public static final DeferredItem<Item> STEEL_NUGGET=ITEMS.registerSimpleItem("steel_nugget");
     public static final DeferredItem<Item> RESONANT_BOTTLE=ITEMS.registerSimpleItem("resonant_bottle",new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).rarity(Rarity.UNCOMMON).stacksTo(16));
     public static final DeferredItem<ItemChargedEchoShard> CHARGED_ECHO_SHARD=ITEMS.register("charged_echo_shard",
             ()->new ItemChargedEchoShard(new Item.Properties().rarity(Rarity.UNCOMMON)));
@@ -225,31 +226,31 @@ public class ItemRegistry {
             ()->new ArmorItem(ArmorMaterials.BRONZE, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))));
     //steel armor
     public static final DeferredItem<ArmorItem> STEEL_HELMET=ITEMS.register("steel_helmet",
-            ()->new ArmorItem(ArmorMaterials.STEEL, ArmorItem.Type.HELMET,new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(22))));
+            ()->new ArmorItem(ArmorMaterials.STEEL, ArmorItem.Type.HELMET,new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(27))));
     public static final DeferredItem<ArmorItem> STEEL_CHESTPLATE=ITEMS.register("steel_chestplate",
-            ()->new ArmorItem(ArmorMaterials.STEEL, ArmorItem.Type.CHESTPLATE,new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(22))));
+            ()->new ArmorItem(ArmorMaterials.STEEL, ArmorItem.Type.CHESTPLATE,new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(27))));
     public static final DeferredItem<ArmorItem> STEEL_LEGGINGS=ITEMS.register("steel_leggings",
-            ()->new ArmorItem(ArmorMaterials.STEEL, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(22))));
+            ()->new ArmorItem(ArmorMaterials.STEEL, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(27))));
     public static final DeferredItem<ArmorItem> STEEL_BOOTS=ITEMS.register("steel_boots",
-            ()->new ArmorItem(ArmorMaterials.STEEL, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(22))));
+            ()->new ArmorItem(ArmorMaterials.STEEL, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(27))));
     //alumite armor
     public static final DeferredItem<ArmorItem> ALUMITE_HELMET=ITEMS.register("alumite_helmet",
-            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.HELMET,new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(27)).rarity(Rarity.UNCOMMON)));
+            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.HELMET,new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(31)).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<ArmorItem> ALUMITE_CHESTPLATE=ITEMS.register("alumite_chestplate",
-            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.CHESTPLATE,new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(27)).rarity(Rarity.UNCOMMON)));
+            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.CHESTPLATE,new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(31)).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<ArmorItem> ALUMITE_LEGGINGS=ITEMS.register("alumite_leggings",
-            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(27)).rarity(Rarity.UNCOMMON)));
+            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(31)).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<ArmorItem> ALUMITE_BOOTS=ITEMS.register("alumite_boots",
-            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(27)).rarity(Rarity.UNCOMMON)));
+            ()->new ArmorItem(ArmorMaterials.ALUMITE, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(31)).rarity(Rarity.UNCOMMON)));
     //enderium armor
     public static final DeferredItem<ArmorItem> ENDERIUM_HELMET=ITEMS.register("enderium_helmet",
-            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.HELMET,new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(35)).rarity(Rarity.RARE).fireResistant()));
+            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.HELMET,new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(38)).rarity(Rarity.RARE).fireResistant()));
     public static final DeferredItem<ArmorItem> ENDERIUM_CHESTPLATE=ITEMS.register("enderium_chestplate",
-            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.CHESTPLATE,new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(35)).rarity(Rarity.RARE).fireResistant()));
+            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.CHESTPLATE,new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(38)).rarity(Rarity.RARE).fireResistant()));
     public static final DeferredItem<ArmorItem> ENDERIUM_LEGGINGS=ITEMS.register("enderium_leggings",
-            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(35)).rarity(Rarity.RARE).fireResistant()));
+            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.LEGGINGS,new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(38)).rarity(Rarity.RARE).fireResistant()));
     public static final DeferredItem<ArmorItem> ENDERIUM_BOOTS=ITEMS.register("enderium_boots",
-            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(35)).rarity(Rarity.RARE).fireResistant()));
+            ()->new ArmorItem(ArmorMaterials.ENDERIUM, ArmorItem.Type.BOOTS,new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(38)).rarity(Rarity.RARE).fireResistant()));
 
     //foods
     public static final FoodProperties LEEK=new FoodProperties.Builder().nutrition(1).saturationModifier(0.3F).fast().build();
@@ -406,6 +407,9 @@ public class ItemRegistry {
     public static final DeferredItem<BlockItem> PRESS=ITEMS.registerSimpleBlockItem(BlockRegistry.PRESS);
 
     public static final DeferredItem<BlockItem> BELLOW_PUMP=ITEMS.registerSimpleBlockItem(BlockRegistry.BELLOW_PUMP);
+
+    public static final DeferredItem<ItemAikoPlush> AIKO_PLUSH=ITEMS.register("aiko_plush",
+            ()->new ItemAikoPlush(BlockRegistry.AIKO_PLUSH.get(),new Item.Properties()));
 
     /*public static final DeferredItem<BlockItem> CRUSHER=ITEMS.registerSimpleBlockItem(BlockRegistry.CRUSHER);
 
